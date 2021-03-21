@@ -25,6 +25,7 @@ body {
 .menu {
   top: 170px;
   position: relative;
+  color: black !important;
 }
 .links {
   text-align: center;
