@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
+//Colored Design Guidelines
+/* .row {
+  border: 2px red solid;
+}
+.col-sm-6 {
+  border: 2px blue solid;
+}
+.col-sm-6 {
+  border: 2px green solid;
+} */
+
+//Actual CSS
+body {
+  background: whitesmoke;
+}
+#header {
+  top: 140px;
+  position: relative;
+}
+.header-pfp {
+  width: 200px;
+}
+.menu {
+  top: 170px;
+  position: relative;
+}
+.links {
+  text-align: center;
+}
+.links li {
+  display: inline-block;
+  padding: 10px;
+  top: 170px;
+  position: relative;
+}
+a, a:link, a:active, a:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.emoji:before {
+  content: "👋";
+  font-size: 30px;
+}
+#topHeader {
+  min-height: 100vh;
+  background: #001f3f !important;
+  color: white !important;
+}
+#about {
+  height: 100vh;
+  background: #111111;
+  color: #01FF70;
+}
