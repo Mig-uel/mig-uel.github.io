@@ -37,8 +37,11 @@ body {
   position: relative;
 }
 a, a:link, a:active, a:hover, a:visited{
-  text-decoration: none;
-  color: whitesmoke;
+  text-decoration: none !important;
+  color: black !important;
+}
+.linksColor:hover {
+  border-bottom: 2px solid black;
 }
 .emoji:before {
   content: "👋";
@@ -46,17 +49,26 @@ a, a:link, a:active, a:hover, a:visited{
 }
 #topHeader {
   min-height: 100vh;
-  background: #001f3f !important;
-  color: white !important;
+  background: whitesmoke !important;
+  color: black !important;
+    box-shadow: 10px 10px 10px 10px;
 }
 #about {
   height: 100vh;
-  background: #111111;
-  color: #01FF70;
 }
 
 .titles {
-  color: white;
-  top: 200px;
+  top: 300px;
   position: relative;
+  text-align: center;
+}
+.titles-bg {
+  background: #121212 !important;
+  height: 100vh;
+  color: whitesmoke;
+}
+.content-bg {
+  background: #F08080;
+  height: 100vh;
+  color: whitesmoke;
 }
