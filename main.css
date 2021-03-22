@@ -54,3 +54,9 @@ a, a:link, a:active, a:hover, a:visited{
   background: #111111;
   color: #01FF70;
 }
+
+.titles {
+  color: white;
+  top: 200px;
+  position: relative;
+}
