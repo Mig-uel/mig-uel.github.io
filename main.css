@@ -72,3 +72,7 @@ a, a:link, a:active, a:hover, a:visited{
   height: 100vh;
   color: whitesmoke;
 }
+.about-me {
+  font-size: 30px;
+  padding: 10px;
+}
