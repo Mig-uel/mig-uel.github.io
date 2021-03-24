@@ -64,15 +64,16 @@ a, a:link, a:active, a:hover, a:visited{
 }
 .titles-bg {
   background: #121212 !important;
-  height: 100vh;
+  height: 700px;
   color: whitesmoke;
 }
 .content-bg {
   background: #F08080;
-  height: 100vh;
+  height: 700px;
   color: whitesmoke;
 }
 .about-me {
   font-size: 30px;
-  padding: 10px;
+  padding: 65px;
+  height: relative;
 }
