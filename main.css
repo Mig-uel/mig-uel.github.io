@@ -77,3 +77,29 @@ a, a:link, a:active, a:hover, a:visited{
   padding: 65px;
   height: relative;
 }
+
+.socialMediaBar div ul li a img{
+  width: 2em;
+  height: 2em;
+}
+#topHeader .socialMediaBar {
+  top: 15px;
+  /* width: 100%; */
+  position: relative;
+  margin: 0 auto;
+}
+.socialMediaBar div ul li {
+  float: left;
+  padding: 15px;
+}
+.socialMediaBar div ul{
+  list-style-type: none;
+  padding: 10px;
+}
+.socialIcons:hover {
+  color: red !important;
+}
+.icons {
+  top: 2px;
+  position: relative;
+}
