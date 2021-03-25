@@ -47,7 +47,7 @@ a, a:link, a:active, a:hover, a:visited{
   font-size: 30px;
 }
 #topHeader {
-  min-height: 100vh;
+  min-height: 750px;
   background: whitesmoke !important;
   color: black !important;
   border-top-left-radius: 20px;
@@ -102,4 +102,6 @@ a, a:link, a:active, a:hover, a:visited{
 .icons {
   top: 2px;
   position: relative;
+  width: 1.8em !important;
+  heigh: 1.8em !important;
 }
