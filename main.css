@@ -6,11 +6,14 @@ body, html {
   top: 245px;
   position: relative;
 }
+#mobileHeader {
+  top: -40px;
+}
 .header-pfp {
   width: 200px;
 }
 .menu {
-  top: 250px;
+  top: 230px;
   position: relative;
   color: black !important;
 }
