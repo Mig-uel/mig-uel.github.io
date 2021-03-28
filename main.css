@@ -1,3 +1,11 @@
+@media (max-width: 800px) {
+  #topHeader {
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+  }
+}
+
+
 body, html {
   background-color: black !important;
   background: black !important;
