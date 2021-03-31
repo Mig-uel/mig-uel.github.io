@@ -1,0 +1,40 @@
+* {
+  font-family: Avenir;
+}
+#header {
+/*   border: 3px solid red; */
+  background: url("");
+  height: 700px;
+}
+#nav-bar {
+  left: 0;
+/*   border: 3px solid black; */
+  position: fixed;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: whitesmoke;
+}
+#title {
+  text-indent: 20px;
+  position: relative;
+  top: 25px;
+}
+#header ul {
+  float: right;
+  list-style: none;
+  position: relative;
+  margin: 0 auto;
+  top: -30px;
+  right: 20px;
+}
+#header ul li {
+  top: 0;
+  float: left;
+  padding: 10px;
+}
+a, a:visited, a:active {
+  color: whitesmoke;
+  text-decoration: none;
+}
