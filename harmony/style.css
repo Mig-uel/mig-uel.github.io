@@ -3,6 +3,7 @@
 }
 #header {
   width: 100%;
+  overflow-x: hidden;
   /* border: 3px solid red; */
 }
 #nav-bar {
@@ -32,6 +33,10 @@
   text-align: center;
   /* border: 2px solid blue; */
 }
+#description {
+  color: whitesmoke;
+  text-align: center;
+}
 #header ul {
   float: right;
   list-style: none;
@@ -51,7 +56,7 @@ a, a:visited, a:active, a:hover {
   object-fit: cover;
   width: 100vw;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -15px;
+  right: 0px;
   position: relative;
 }
