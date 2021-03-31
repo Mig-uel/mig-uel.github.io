@@ -49,7 +49,7 @@ a, a:visited, a:active, a:hover {
 }
 #header video {
   object-fit: cover;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
   right: 0;
