@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   position: fixed;
-  color: red;
+  font-size: 1.5vw;
   /* border: 3px solid black; */
   /* background: #000000;
   background: -webkit-linear-gradient(to right, #434343, #000000);
@@ -28,7 +28,7 @@
 .wrapper #title {
   width: 100%;
   color: whitesmoke;
-  font-size: 4em;
+  font-size: 6vw;
   text-align: center;
   /* border: 2px solid blue; */
 }
