@@ -1,7 +1,7 @@
 * {
   font-family: Avenir;
 }
-#header {
+#hero {
   width: 100%;
   overflow-x: hidden;
   /* border: 3px solid red; */
@@ -36,14 +36,16 @@
 #description {
   color: whitesmoke;
   text-align: center;
+  left: 0;
+  right: 0;
 }
-#header ul {
+#hero ul {
   float: right;
   list-style: none;
   position: relative;
   top: 10px;
 }
-#header ul li {
+#hero ul li {
   top: 0;
   float: left;
   padding: 10px;
@@ -52,7 +54,7 @@ a, a:visited, a:active, a:hover {
   color: whitesmoke;
   text-decoration: none;
 }
-#header video {
+#hero video {
   object-fit: cover;
   width: 100vw;
   top: 0;
