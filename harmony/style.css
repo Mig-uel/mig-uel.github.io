@@ -1,3 +1,23 @@
+@media (max-width: 800px) {
+  #hero video {
+    display: none;
+  }
+  header {
+    background-image: url("assets/woman.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    border: 2px solid red;
+    height: 400px;
+    width: 100vw;
+    left: -15px;
+    position: relative;
+  }
+  #nav-bar {
+    display: none;
+  }
+}
 * {
   font-family: Avenir;
 }
