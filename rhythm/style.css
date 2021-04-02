@@ -1,7 +1,7 @@
 @media (max-width: 800px) {
   #hero video {
-    display: none;
-  }
+      display: none;
+    }
   header {
     background-image: url("assets/woman.png");
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
     left: -15px;
     position: relative;
   }
-  #nav-bar {
+  #nav-bar-list{
     display: none;
   }
   #menu {
@@ -25,24 +25,30 @@
     right: 15px;
     float: right;
   }
+  .features-heading {
+    top: 20px;
+    position: relative;
+  }
+  .features-desc {
+    top: 5px;
+    position: relative;
+  }
 }
 * {
   font-family: Avenir;
 }
+body {
+  background-color: whitesmoke;
+}
 #hero {
   width: 100%;
   overflow-x: hidden;
-  /* border: 3px solid red; */
 }
-#nav-bar {
+#nav-bar-list {
   top: 0;
   left: 0;
   position: fixed;
   font-size: 1.5vw;
-  /* border: 3px solid black; */
-  /* background: #000000;
-  background: -webkit-linear-gradient(to right, #434343, #000000);
-  background: linear-gradient(to right, #434343, #000000); */
 }
 .wrapper {
   position: absolute;
@@ -52,14 +58,12 @@
   top: 35%;
   left: 0;
   right: 0;
-  /* border: 2px solid black; */
 }
 .wrapper #title {
   width: 100%;
   color: whitesmoke;
   font-size: 6vw;
   text-align: center;
-  /* border: 2px solid blue; */
 }
 #description {
   color: whitesmoke;
@@ -76,7 +80,6 @@
 #hero ul li {
   top: 0;
   float: left;
-  padding: 10px;
 }
 a, a:visited, a:active, a:hover {
   color: whitesmoke;
@@ -92,4 +95,26 @@ a, a:visited, a:active, a:hover {
 }
 #menu {
   display: none;
+}
+#header-img {
+  width: 4.5em;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 3px;
+}
+.features-section {
+  position: relative;
+  text-align: center;
+  /* height: 200px; */
+  top: 30px;
+  padding: -20px;
+}
+.features-section p {
+  top: 15px;
+  position: relative;
+  line-height: 2;
+}
+.features-section h3, i {
+  color: #32CD32;
 }
