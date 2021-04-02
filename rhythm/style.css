@@ -1,21 +1,24 @@
 @media (max-width: 800px) {
   #hero video {
-      display: none;
-    }
+    display: none;
+  }
+
   header {
     background-image: url("assets/woman.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
-    height: 400px;
+    height: 100vh;
     width: 100vw;
     left: -15px;
     position: relative;
   }
-  #nav-bar-list{
+
+  #nav-bar-list {
     display: none;
   }
+
   #menu {
     display: block !important;
     width: 6vw;
@@ -25,31 +28,46 @@
     right: 15px;
     float: right;
   }
-  .features-heading {
-    top: 20px;
-    position: relative;
+}
+
+@media (max-width: 1200px) {
+  .features-section {
+    margin: 20px;
   }
-  .features-desc {
-    top: 5px;
-    position: relative;
+  .custom-section-1 {
+    right: 0;
+  }
+  .custom-section-2 {
+    left: 0 !important;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .custom-section-3 {
+    margin: auto;
+    margin-top: 30px;
   }
 }
+
 * {
   font-family: Avenir;
 }
+
 body {
   background-color: whitesmoke;
 }
+
 #hero {
   width: 100%;
   overflow-x: hidden;
 }
+
 #nav-bar-list {
   top: 0;
   left: 0;
   position: fixed;
   font-size: 1.5vw;
 }
+
 .wrapper {
   position: absolute;
   z-index: 1;
@@ -59,32 +77,38 @@ body {
   left: 0;
   right: 0;
 }
+
 .wrapper #title {
   width: 100%;
   color: whitesmoke;
   font-size: 6vw;
   text-align: center;
 }
+
 #description {
   color: whitesmoke;
   text-align: center;
   left: 0;
   right: 0;
 }
+
 #hero ul {
   float: right;
   list-style: none;
   position: relative;
   top: 10px;
 }
+
 #hero ul li {
   top: 0;
   float: left;
 }
+
 a, a:visited, a:active, a:hover {
   color: whitesmoke;
   text-decoration: none;
 }
+
 #hero video {
   object-fit: cover;
   width: 100vw;
@@ -93,9 +117,11 @@ a, a:visited, a:active, a:hover {
   right: 0px;
   position: relative;
 }
+
 #menu {
   display: none;
 }
+
 #header-img {
   width: 4.5em;
   height: auto;
@@ -106,15 +132,31 @@ a, a:visited, a:active, a:hover {
 .features-section {
   position: relative;
   text-align: center;
-  /* height: 200px; */
-  top: 30px;
-  padding: -20px;
+  /* border: 2px solid #32CD32; */
+  border-radius: 5px;
+  padding: 20px;
+  /* margin: 1px; */
 }
+
 .features-section p {
   top: 15px;
   position: relative;
   line-height: 2;
 }
+
 .features-section h3, i {
   color: #32CD32;
+}
+.features-wrapper {
+  /* border: 2px solid red; */
+  padding: 50px;
+}
+.features-wrapper .features-section {
+  float: left;
+}
+.custom-section-1 {
+  right: 20px;
+}
+.custom-section-2 {
+  left: 20px;
 }
