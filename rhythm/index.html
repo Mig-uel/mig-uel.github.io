@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
   <div class="container-fluid">
     <div class="row">
@@ -42,10 +42,9 @@
     </div>
 
     <div class="row" id="features">
-      <div class="col-md-12">
-        <br /><br />
-        <h2 class="text-center">Features</h2>
-      </div>
+      <!-- <div class="col-xl-12 headingPadding">
+        <h2>Features</h2>
+      </div> -->
       <div class="col-lg-12 features-wrapper">
       <div class="col-xl-4 features-section custom-section-1">
         <div>
@@ -81,15 +80,29 @@
     </div>
 
     <div class="row" id="howitworks">
-      <div class="col-xl-12 text-center">
-        <br /><br />
+      <div class="col-xl-12 headingPadding">
         <h2>How It Works</h2>
       </div>
-      <div class="col-xl-12 text-center">
-        <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/fMtlzp4FgCE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="embed-responsive embed-responsive-16by9 videoWrapper">
+        <iframe class="embed-responsive-item" id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/fMtlzp4FgCE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
 
+    <div class="row" id="download">
+      <div class="col-xl-12 text-center">
+        <h2>Sign up to be notified when Rhythm goes live!</h2>
+        <p>*We pinky promise not to sell your data!*</p><br/>
+        <form id="form" name="download" action=" https://www.freecodecamp.com/email-submit">
+          <input name="email" id="email" type="email" placeholder="name@email.com" required/>
+          <input id="submit" type="submit" class="btn btn-outline-light" value="Submit"/>        </form>
+
+        <ul id="footerMenu">
+          <li><a href="">Privacy</a></li>
+          <li><a href="">Terms</a></li>
+          <li><a href="">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 </body>
