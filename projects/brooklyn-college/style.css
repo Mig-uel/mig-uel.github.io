@@ -1,0 +1,48 @@
+@media (max-width: 800px){
+  .row form {
+    width: auto !important;
+  }
+}
+
+* {
+  line-height: 30px;
+}
+body {
+  background:
+/*     linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)), */
+  url("https://www.yaseinuk.com/images/projects/BrooklynWestQuad/01.Brooklyn_College_West_Quad.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+p, h1, form{
+  color: whitesmoke;
+}
+.row form {
+  background: linear-gradient(rgba(136, 35, 70, 0.90), rgba(136, 35, 70, 0.90));
+/*   width: auto; */
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 2px;
+  width: 550px;
+}
+#submit {
+  background-color: rgb(129,188, 0);
+  color: whitesmoke;
+  outline: none;
+}
+.inputs1 {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+}
+#dropdown {
+    padding:5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
