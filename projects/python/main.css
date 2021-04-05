@@ -1,0 +1,38 @@
+a:hover, a {
+  text-decoration: none !important;
+}
+header {
+  padding: 10px 0;
+}
+h5 {
+  padding-bottom: 5px;
+}
+p {
+  text-indent: 15px;
+}
+#navbar {
+  height: 100vh;
+  border-right: 1px solid darkgray;
+  position: fixed;
+  /* border: 2px solid red; */
+  left: 0;
+  top: 0;
+  padding: 25px;
+}
+#nav-link {
+  list-style: none;
+  padding: 0;
+}
+#nav-link li {
+  padding: 10px 0;
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+}
+#main-doc {
+  border: 2px solid blue;
+  position: absolute !important;
+  right: 0;
+}
+.main-section {
+  padding: 25px;
+}
