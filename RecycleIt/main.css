@@ -1,3 +1,10 @@
-.form-inline {
-  text-align: right;
+#navbarNavAltMarkup .form-inline {
+  
+}
+body {
+  background-image: url("https://n-o-v-a.com/wp-content/uploads/2018/09/Recycle-blog-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
