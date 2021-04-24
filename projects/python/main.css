@@ -1,7 +1,7 @@
 a:hover, a {
   text-decoration: none !important;
 }
-header {
+/* header {
   padding: 10px 0;
 }
 h5 {
@@ -10,22 +10,51 @@ h5 {
 p {
   text-indent: 15px;
 }
+ #title {
+  text-align: center;
+}
 #navbar {
   height: 100vh;
   border-right: 1px solid darkgray;
   position: fixed;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   left: 0;
   top: 0;
   padding: 25px;
 }
-#nav-link {
+#navbar #nav-link {
+  position: relative;
   list-style: none;
   padding: 0;
+  left: -25px;
+  border: 1px solid blue;
 }
 #nav-link li {
+  text-indent: 25px;
   padding: 10px 0;
-  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+} */
+
+#headers {
+  font-size: 25px;
+  text-align: center;
+  padding: 15px 0;
+  border: 1px solid black;
+}
+#nav-bar {
+  border: 2px solid darkgray;
+  position: fixed;
+  min-width: 300px;
+  left: 0;
+}
+#navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+}
+.navbar-li {
+  padding: 10px 10px; /* Top/Bottom, Left/Right */
   border-bottom: 1px solid darkgray;
 }
 #main-doc {

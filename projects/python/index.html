@@ -1,76 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Python Technical Documentation Page</title>
-    <link href="main.css" rel="stylesheet" type="text/css" >
-    <script src="https://kit.fontawesome.com/e0adc38905.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
 
-  <body>
-    <div class="container-fluid" id="main">
-      <div class="row">
-        <div class="col-md-2" id="navbar">
-          <header><h3>Python Documentation</h3></header>
-          <ul id="nav-link">
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#">Getting Started</a></li>
-            <li><a href="#">Syntax</a></li>
-            <li><a href="#">Hello, world!</a></li>
-            <li><a href="#">Data Types</a></li>
-          </ul>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <title>Python Technical Documentation Page</title>
+  <link href="main.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/e0adc38905.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-        <div class="col-md-10" id="main-doc">
-          <!-- Section 1 -->
-          <section class="main-section" id="introduction">
-            <header><h3>Introduction</h3></header>
-            <h5>What is Python?</h5>
-            <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
-            <p>It is used for:</p>
-            <ul>
-              <li>web development (server-side)</li>
-              <li>software development</li>
-              <li>mathematics</li>
-              <li>system scripting</li>
-            </ul>
-            <h5>What can Python do?</h5>
-          </section>
+<body>
+  <div class="col-md-12" id="nav-bar" role="navigation">
+    <header class="" id="headers">Python Documentation</header>
+    <div class="" id="">
+      <ul id="navbar-links">
+        <li class="navbar-li" id="">Introduction</li>
+        <li class="navbar-li" id="">Getting Started</li>
+        <li class="navbar-li" id="">Syntax</li>
+        <li class="navbar-li" id="">Hello, World!</li>
+        <li class="navbar-li" id="">Data Types</li>
+      </ul>
+    </div>
+  </div>
 
-          <!-- Section 2 -->
-          <section class="main-section" id="getting_started">
-            <header><h3>Getting started</h3></header>
-          </section>
+  <!-- MAIN CONTENT -->
 
-          <!-- Section 3 -->
-          <section class="main-section" id="syntax">
-            <header><h3>Syntax</h3></header>
-          </section>
+  <div class="container-fluid">
+    <div class="row" id="main">
+    <div class="col-md-10" id="main-doc">
+      <!-- Section 1 -->
+      <section class="main-section">
+        <header id="introduction">
+          <h3>Introduction</h3>
+        </header>
+        <h5>What is Python?</h5>
+        <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+        <p>It is used for:</p>
+        <ul>
+          <li>web development (server-side)</li>
+          <li>software development</li>
+          <li>mathematics</li>
+          <li>system scripting</li>
+        </ul>
+        <h5>What can Python do?</h5>
+        <ul>
+          <li>Python can be used on a server to create web applications.</li>
+          <li>Python can be used alongside software to create workflows.</li>
+          <li>Python can connect to database systems. It can also read and modify files.</li>
+          <li>Python can be used to handle big data and perform complex mathematics.</li>
+          <li>Python can be used for rapid prototyping, or for production-ready software development.</li>
+        </ul>
+        <h5>Why Python?</h5>
+        <ul>
+          <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+          <li>Python has a simple syntax similar to the English language.</li>
+          <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</li>
+          <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
+          <li>Python can be treated in a procedural way, an object-oriented way or a functional way.</li>
+        </ul>
+        <h5>Good to know</h5>
+        <ul>
+          <li>The most recent major version of Python is Python 3, which we shall be using in this tutorial. However, Python 2, although not being updated with anything other than security updates, is still quite popular.</li>
+          <li>In this tutorial Python will be written in a text editor. It is possible to write Python in an Integrated Development Environment, such as Thonny, Pycharm, Netbeans or Eclipse which are particularly useful when managing larger
+            collections of Python files.</li>
+        </ul>
+        <h5>Python Syntax</h5>
+        <ul>
+          <li>Python was designed for readability, and has some similarities to the English language with influence from mathematics.</li>
+          <li>Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.</li>
+          <li>Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</li>
+        </ul>
+      </section>
 
-          <!-- Section 4 -->
-          <section class="main-section" id="hello_world">
-            <header><h3>Hello, world!</h3></header>
-          </section>
+      <!-- Section 2 -->
+      <section class="main-section">
+        <header id="getting_started">
+          <h3>Getting started</h3>
+        </header>
+      </section>
 
-          <!-- Section 5 -->
-          <section class="main-section" id="data_types">
-            <header><h3>Data types</h3></header>
-          </section>
+      <!-- Section 3 -->
+      <section class="main-section" id="syntax">
+        <header>
+          <h3>Syntax</h3>
+        </header>
+      </section>
 
-        </div>
-      </div>
+      <!-- Section 4 -->
+      <section class="main-section" id="hello_world">
+        <header>
+          <h3>Hello, world!</h3>
+        </header>
+      </section>
 
-
-
-
-
-
-
-
-
+      <!-- Section 5 -->
+      <section class="main-section" id="data_types">
+        <header>
+          <h3>Data types</h3>
+        </header>
+      </section>
 
     </div>
-  </body>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+</body>
+
 </html>
