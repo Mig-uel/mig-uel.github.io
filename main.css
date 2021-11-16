@@ -7,43 +7,56 @@ body {
 }
 header {
   /* outline: 1px solid red; */
-  z-index: 1;
-  height: 100px;
+  /* z-index: 1; */
   width: 100%;
-  display: flex;
-  flex-direction: row;
   position: fixed;
   font-family: 'Shippori Antique B1', sans-serif;
 }
 header nav {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding: 20px;
 }
 header nav a {
+  z-index: 1;
   text-decoration: none;
   color:#2c3e50;
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
   margin: 0 10px;
 }
 a:hover {
   color: #ecf0f1;
 }
 main {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   font-family: 'Roboto', sans-serif;
 }
 section {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   height: 100vh;
   display: flex;
   flex-direction: row;
 }
 code {
   color: black;
+}
+input {
+  border: 1px solid #ecf0f1;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+textarea {
+  border: 1px solid #ecf0f1;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  height: 100%;
+  resize: none;
 }
 
 /* ID's */
@@ -62,4 +75,57 @@ code {
   width: 40px;
   align-self: center;
   padding: 50px;
+}
+#greeting {
+  background: -webkit-linear-gradient(#FF416C, #FF4B2B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contact-rec {
+  margin: 0 auto;
+  color: white;
+  max-width: 600px;
+  min-width: 250px;
+  border-radius: 5px;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(#FF416C, #FF4B2B);
+  padding: 20px;
+}
+#social-networks p a {
+  color: white;
+}
+#social-networks {
+  width: 350px;
+  font-size: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#social-networks i {
+  padding: 10px;
+}
+#contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  header nav {
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
