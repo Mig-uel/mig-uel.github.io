@@ -1,70 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset=“UTF-8”>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="main.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Miguel Castillo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello, world! 👋</title>
 </head>
 
 <body>
-  <div class="container-fluid" id="topHeader">
-    <div class="row d-none d-md-block fixedNav">
-      <div class="col-sm-12">
-        <ul class="linkslist">
-          <li><a href="#header" class="navlinks">HOME</a></li>
-          <li><a href="#about" class="navlinks">ABOUT</a></li>
-          <li><a href="Miguel_Castillo_Resume.pdf" class="navlinks">RESUME</a></li>
-          <li><a href="projects" class="navlinks">PROJECTS</a></li>
-          <li><a href="#contact" class="navlinks">CONTACT</a></li>
-        </uL>
-      </div>
-    </div>
-
-    <div class="row" id="header">
-      <div class="col-sm-6 d-none d-md-block">
-        <img class="rounded-circle mx-auto float-right header-pfp"
-          src="https://scontent-lga3-2.cdninstagram.com/v/t51.2885-19/s320x320/241696669_863419760966424_2877253590221084605_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_ohc=8jUSiwFisS8AX9Etwwt&tn=k1FVOXh-sYNZW2Xw&edm=ABfd0MgBAAAA&ccb=7-4&oh=2a02a7c7b3221eea79361ec75ca42fd6&oe=614B99AA&_nc_sid=7bff83"
-          alt="Profile photo" />
-      </div>
-      <div class="col-sm-6  d-none d-md-block">
-        <h1 class="float-left"><span class="emoji"></span> <span class="">Hello, world!<br> I'm Miguel Castillo <br>and this is my <br>website.</span></h1>
-      </div>
-
-      <!-- Mobile-Only -->
-      <div class="col-md-6  d-md-none d-lg-none d-xl-none" id="mobileHeader">
-        <img class="rounded-circle mx-auto d-block header-pfp"
-          src="https://scontent-lga3-1.cdninstagram.com/v/t51.2885-19/s320x320/128329153_212147503766958_3602564921861313780_n.jpg?tp=1&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_ohc=kOz9z6xYxTIAX8BERVW&oh=2b789ceb25efada04f802dbed78e6e98&oe=60683D2F"
-          alt="Profile photo" />
-        <div class="col-md-6  d-md-none d-lg-none d-xl-none"><br>
-          <h1 class="text-center"><span class="emoji"></span> <span class="hgradient">Hello, world!<br> I am Miguel Castillo.</span></h1>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="container-fluid">
+      <section class="row" id="home">
+        <div class="col-md-12">
+          <img class="img-fluid rounded mx-auto d-block" src="https://avatars.githubusercontent.com/u/35431824?v=4"
+            alt="Github profile image">
+          <h1 class="text-center">
+            <code><span id="language-begin">console.log(</span>"Hello, world!"<span id="langauge-end">);</span></code>
+          </h1>
+          <h5 class="text-center"><code>let human = {
+              name: 'Miguel', job: 'Student',<br/>message: 'Welcome to my page! :P'
+            };</code></h5>
         </div>
-      </div>
-      <!-- End -->
-      <div class="row socialMediaBar">
-        <div class="col-sm-12 d-none d-md-block">
-          <ul>
-            <li><a href="https://www.linkedin.com/in/miglcastillo/" target="_blank" class="socialIcons"><img src="icons/linkedin.svg" /></a></li>
-            <li><a href="https://github.com/mig-uel" target="_blank" class="socialIcons"><img src="icons/github.svg" /></a></li>
-            <li><a href="https://twitter.com/whitesauce" target="_blank" class="socialIcons"><img class="icons" src="icons/twitter.svg" /></a></li>
-            <li><a href="https://instagram.com/" target="_blank" class="socialIcons"><img class="icons" src="icons/instagram.svg" /></a></li>
-          </ul>
+        <i class="fas fa-chevron-down"></a></i>
+      </section>
+      <section class="row" id="about">
+        <div class="col-md-12">
+
         </div>
-      </div>
+      </section>
+      <section class="row" id="projects">
+        <div class="col-md-12">
+
+        </div>
+      </section>
+      <section class="row" id="contact">
+        <div class="col-md-12">
+
+        </div>
+      </section>
     </div>
-
-    <!-- Mobile-Only -->
-    <div class="row  d-md-none d-lg-none d-xl-none menu">
-      <div class="list-group mx-auto text-center">
-        <a href="#" class="list-group-item list-group-item-action">Menu
-        </a>
-      </div>
-    </div> <br>
-    <!-- End -->
-  </div>
-
+  </main>
 </body>
 
 </html>
