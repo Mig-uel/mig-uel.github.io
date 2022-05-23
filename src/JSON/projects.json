@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "githubLink": "http://github.com/mig-uel/bonjour",
+    "livePreview": "https://bonjourapp.netlify.app/",
+    "name": "Bonjour",
+    "description": "Bonjour is a homepage-like web app for use throughout your day; especially when getting it started.",
+    "bgImage": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765"
+  },
+  {
+    "id": "2",
+    "githubLink": "https://github.com/mig-uel/royal-clothing",
+    "livePreview": "",
+    "name": "Royal Clothing",
+    "description": "MERN based e-commerce site for a clothing store.",
+    "bgImage": "https://images.unsplash.com/photo-1626730990312-df8701a7f3d6?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
+  },
+  {
+    "id": "3",
+    "githubLink": "http://github.com/mig-uel/stocks-app",
+    "livePreview": "https://mooning.netlify.app/",
+    "name": "Stocks App",
+    "description": "A simple stock tracker app that uses iEX Cloud API.",
+    "bgImage": "https://images.unsplash.com/photo-1549421263-6064833b071b?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1665"
+  },
+  {
+    "id": "4",
+    "githubLink": "http://github.com/mig-uel/Sneaker-Labs",
+    "livePreview": "https://sneakerlabs.netlify.app/",
+    "name": "Sneaker Labs",
+    "description": "A simple front-end only site for a sneaker store using a Sneaker API.",
+    "bgImage": "https://images.unsplash.com/photo-1552346154-21d32810aba3?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
+  },
+  {
+    "id": "5",
+    "githubLink": "https://github.com/mig-uel/Sophia",
+    "livePreview": "https://projectsophia.netlify.app/",
+    "name": "Sophia",
+    "description": "A simple front-end only site that uses an Advice API.",
+    "bgImage": "https://images.unsplash.com/photo-1645839057098-5ea8761a6b09?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632"
+  }
+]

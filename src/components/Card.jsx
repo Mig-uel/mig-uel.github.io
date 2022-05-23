@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 
-const Card = ({ bgImage, title, description, link }) => {
+const Card = ({ bgImage, name, description, githubLink }) => {
   return (
-    <div className="card" style={{ backgroundImage: `url(${bgImage})` }}>
-      <a href={link}>
-        <h1>{title}</h1>
-        <p>{description}</p>
+    <>
+      <a href={githubLink}>
+        <div className="card" style={{ backgroundImage: `url(${bgImage})` }}>
+          <h1 className="card-title">{name}</h1>
+          <p className="card-description">{description}</p>
+        </div >
       </a>
-    </div >
+    </>
+
   );
 }
 
@@ -24,7 +27,5 @@ Card.defaultProps = {
   description: '',
   link: 'htps://google.com/images/sad404.svg'
 }
-
-
 
 export default Card;
