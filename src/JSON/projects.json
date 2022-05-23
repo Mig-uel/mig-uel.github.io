@@ -17,9 +17,9 @@
   },
   {
     "id": "3",
-    "githubLink": "http://github.com/mig-uel/stocks-app",
+    "githubLink": "http://github.com/mig-uel/mooning",
     "livePreview": "https://mooning.netlify.app/",
-    "name": "Stocks App",
+    "name": "Mooning",
     "description": "A simple stock tracker app that uses iEX Cloud API.",
     "bgImage": "https://images.unsplash.com/photo-1549421263-6064833b071b?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1665"
   },

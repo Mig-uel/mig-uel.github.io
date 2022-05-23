@@ -1,4 +1,4 @@
-import { BsGithub, BsTwitter, BsInstagram } from 'react-icons/bs';
+import { BsGithub, BsTwitter, BsInstagram, BsFileEarmarkPdf } from 'react-icons/bs';
 import memoji from '../assets/memoji.svg';
 
 const Header = () => {
@@ -23,6 +23,9 @@ const Header = () => {
         </a>
         <a href="https://instagram.com/m.ig.l">
           <BsInstagram />
+        </a>
+        <a href="https://dropbox.com/s/fwgt3v02zg2owni/Miguel_Castillo_CV.pdf?dl=0" target='_blank' rel='noopener noreferrer'>
+          <BsFileEarmarkPdf />
         </a>
       </div>
     </div>
