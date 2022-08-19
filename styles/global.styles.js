@@ -21,13 +21,12 @@ html {
     display: flex;
     flex-direction: column;
 
-    height: 100vh;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-
-    outline: 2px solid #fff;
-
     position: relative;
+
+    transition: all 0.5s ease-in-out;
+
   }
 }
 
