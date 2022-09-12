@@ -18,7 +18,7 @@ const Header = () => {
     <HeaderContainer>
       <ImageContainer>
         <img
-          src='https://miguelcastillo.net/static/media/memoji.8466bbfeebbcb30e5b4eeae09f75c4cf.svg'
+          src='https://github.com/Mig-uel/mig-uel.github.io/blob/main/assets/memoji.8466bbfeebbcb30e5b4eeae09f75c4cf.svg'
           alt='Profile picture'
         />
       </ImageContainer>
