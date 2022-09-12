@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import {
   BsGithub,
   BsTwitter,
@@ -17,7 +19,12 @@ const Header = () => {
   return (
     <HeaderContainer>
       <ImageContainer>
-        {/* <img src={memoji} alt='Profile picture' /> */}
+        <Image
+          src='https://raw.githubusercontent.com/Mig-uel/mig-uel.github.io/0a9fcf0bfdc3b3ab163d553c49e9f4f9d849e76e/assets/memoji.svg'
+          alt='Profile picture'
+          height={200}
+          width={200}
+        />
       </ImageContainer>
 
       <InfoContainer>
