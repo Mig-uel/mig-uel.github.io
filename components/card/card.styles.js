@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+const tertiaryColor = '#FFC0CB'
 
 export const CardContainer = styled.div`
   display: flex;
@@ -18,4 +19,33 @@ export const CardContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  position: relative;
+`
+export const CardInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 70%;
+
+  .title {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+
+    color: ${tertiaryColor};
+  }
+
+  .desc {
+    text-align: center;
+  }
+`
+
+export const TagsContainer = styled.div`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  font-size: 20px;
 `
