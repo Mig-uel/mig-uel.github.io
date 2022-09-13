@@ -15,7 +15,6 @@ export const FooterContainer = styled.div`
 `
 export const FooterIconsContainer = styled.div`
   display: flex;
-  gap: 5px;
 
   padding: 0 4px;
 
@@ -24,7 +23,6 @@ export const FooterIconsContainer = styled.div`
   a {
     display: flex;
 
-    gap: 5px;
     align-items: center;
 
     &:hover {
