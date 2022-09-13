@@ -8,7 +8,7 @@ import {
 } from 'firebase/firestore'
 
 /* ---- Firebase config ---- */
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: 'AIzaSyCt3vJQ5ZPsxFVAoAX4WVVM7eBRFNJyJC0',
   authDomain: 'portfolio-f52a9.firebaseapp.com',
   projectId: 'portfolio-f52a9',
@@ -28,7 +28,7 @@ export async function getProjects() {
 
   try {
     const query = await getDocs(collection(db, 'projects'))
-    
+
     query.forEach((doc) => projects.push(doc.data()))
 
     return projects
