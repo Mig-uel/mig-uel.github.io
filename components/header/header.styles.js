@@ -60,7 +60,7 @@ export const LinksContainer = styled.div`
 
   @supports (-webkit-touch-callout: none) and (not (translate: none)) {
     &:not(:last-child) {
-      margin-right: 5%;
+      margin-right: 30px;
     }
   }
 `
