@@ -8,7 +8,7 @@ import {
 } from 'firebase/firestore'
 
 /* ---- Firebase config ---- */
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: 'AIzaSyCt3vJQ5ZPsxFVAoAX4WVVM7eBRFNJyJC0',
   authDomain: 'portfolio-f52a9.firebaseapp.com',
   projectId: 'portfolio-f52a9',
