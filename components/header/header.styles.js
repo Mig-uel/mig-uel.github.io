@@ -57,4 +57,10 @@ export const LinksContainer = styled.div`
   a:hover {
     color: ${tertiaryColor};
   }
+
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    &:not(:last-child) {
+      margin-right: 5%;
+    }
+  }
 `
