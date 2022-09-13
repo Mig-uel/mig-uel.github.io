@@ -9,10 +9,7 @@ const Footer = () => {
     <FooterContainer>
       Made with
       <FooterIconsContainer>
-        <AiFillHeart color={tertiaryColor} /> |
-        <a href='https://github.com/Mig-uel/mig-uel.github.io'>
-          Source Code <RiCodeBoxFill />
-        </a>
+        <AiFillHeart color={tertiaryColor} />
       </FooterIconsContainer>
     </FooterContainer>
   )
