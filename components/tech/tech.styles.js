@@ -11,8 +11,6 @@ export const Tags = styled.div`
 `
 
 export const Links = styled.div`
-  outline: 1px solid white;
-
   padding: 5px;
   border-radius: 3px;
 
