@@ -1,12 +1,20 @@
 import Layout from '../components/layout/layout.component'
 import Cards from '../components/cards/cards.component'
 
-const Home = () => {
+import { getProjects } from '../utils/firebase.utils'
+
+const Home = ({ projects }) => {
   return (
     <Layout>
-      <Cards />
+      <Cards projects={projects} />
     </Layout>
   )
 }
 
 export default Home
+
+export async function getServerSideProps() {
+  const projects = await getProjects()
+
+  return { props: { projects } }
+}
