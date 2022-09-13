@@ -45,7 +45,11 @@ export const CardInfoContainer = styled.div`
 export const TagsContainer = styled.div`
   position: absolute;
   bottom: 10px;
-  right: 10px;
 
-  font-size: 20px;
+  width: 90%;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
