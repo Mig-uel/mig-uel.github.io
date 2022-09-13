@@ -55,7 +55,7 @@ export const LinksContainer = styled.div`
   font-size: 25px;
 
   a {
-    margin-right: 30px;
+    margin: 0 15px;
   }
 
   a:hover {
