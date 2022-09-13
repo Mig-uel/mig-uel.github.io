@@ -16,5 +16,4 @@ const Document = () => {
     </Html>
   )
 }
-<script>0</script>
 export default Document
