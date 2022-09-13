@@ -17,19 +17,12 @@ const override = {
   position: 'relative',
 }
 
-const Cards = () => {
-  const [projects, setProjects] = useState([])
+const Cards = ({ projects }) => {
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    setLoading(true)
-
-    getProjects().then((i) => {
-      setProjects(i)
-      setLoading(false)
-    })
-  }, [])
-
+  /* ---- 
+    TODO: SETUP OR REMOVE LOADING STATE
+  ---- */
   return loading ? (
     <FadeLoader color='#fff' loading={loading} cssOverride={override} />
   ) : (
