@@ -46,7 +46,7 @@ export const LinksContainer = styled.div`
   flex-direction: row;
   justify-content: center;
 
-  gap: 30px;
+  /* gap: 30px; */
 
   width: 100%;
   margin-top: 30px;
@@ -54,13 +54,17 @@ export const LinksContainer = styled.div`
 
   font-size: 25px;
 
+  a {
+    margin-right: 30px;
+  }
+
   a:hover {
     color: ${tertiaryColor};
   }
 
-  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  /* @supports (-webkit-touch-callout: none) and (not (translate: none)) {
     &:not(:last-child) {
       margin-right: 30px;
     }
-  }
+  } */
 `
