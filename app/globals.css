@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 body {
+  width: 100%;
   color: #fff;
   background: #000;
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
 }
