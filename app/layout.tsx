@@ -19,7 +19,9 @@ export default function RootLayout({
     <html lang='en'>
       <body className={roboto.className}>
         <Header />
-        {children}
+        <main className='flex flex-col justify-center h-dvh mt-10 mb-10 outline outline-1'>
+          {children}
+        </main>
       </body>
     </html>
   )
