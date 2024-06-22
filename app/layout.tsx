@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import './globals.css'
+
+// components
 import Header from '@/components/header/header.component'
+import Footer from '@/components/footer/footer.component'
 
 const roboto = Roboto({ subsets: ['latin'], weight: '400' })
 
@@ -22,6 +25,7 @@ export default function RootLayout({
         <main className='flex flex-col justify-center h-dvh mt-10 mb-10 outline outline-1'>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )
