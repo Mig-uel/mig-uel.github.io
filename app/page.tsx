@@ -1,5 +1,8 @@
 import Image from 'next/image'
 
+// components
+import SocialLinks from '@/components/social-links/social-links.component'
+
 export default function Home() {
   return (
     <section className='flex flex-col-reverse justify-center lg:flex-row gap-10 items-center'>
@@ -13,6 +16,7 @@ export default function Home() {
           work independently and as part of team, and comfortable with agile
           development methods.
         </p>
+        <SocialLinks />
       </div>
 
       <div className='md:shrink-0'>
