@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 // components
 import { FaHeart } from 'react-icons/fa6'
 
