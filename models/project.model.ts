@@ -15,22 +15,15 @@ const ProjectSchema = new Schema(
       type: String,
       required: true,
     },
-    projectSources: [
-      {
-        type: String,
-        required: true,
-      },
-    ],
-    images: [
-      {
-        type: String,
-      },
-    ],
-    tags: [
-      {
-        type: String,
-      },
-    ],
+    projectSource: {
+      type: String,
+      required: true,
+    },
+    images: {
+      cover: { type: [String], required: true },
+      misc: { type: [String] },
+    },
+    tags: [String],
     title: {
       type: String,
       required: true,
