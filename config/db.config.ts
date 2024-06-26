@@ -4,7 +4,10 @@ let connected = false
 
 export const connectDB = async () => {
   try {
-    if (connected) return
+    if (connected) {
+      console.log(`[ALREADY CONNECTED]: MONGODB: ${mongoose.connection.name}`)
+      return
+    }
 
     await mongoose.connect(process.env.MONGODB_URI as string)
     connected = true
