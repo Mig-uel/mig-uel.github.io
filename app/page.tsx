@@ -5,7 +5,7 @@ import SocialLinks from '@/components/social-links/social-links.component'
 
 export default function Home() {
   return (
-    <section className='flex flex-col-reverse justify-center lg:flex-row gap-10 items-center'>
+    <section className='flex flex-col-reverse justify-center lg:flex-row gap-10 items-center h-dvh'>
       <div className='flex flex-col gap-5 justify-center text-center lg:text-left md:w-[400px] lg:h-[400px]'>
         <h1 className='text-4xl'>HELLO,</h1>
         <h1 className='text-4xl'>I AM MIGUEL</h1>
