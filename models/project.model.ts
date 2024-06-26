@@ -1,6 +1,7 @@
+import { IProject } from '@/types'
 import { Schema, models, model } from 'mongoose'
 
-const ProjectSchema = new Schema(
+const ProjectSchema = new Schema<IProject>(
   {
     user: {
       type: Schema.Types.ObjectId,
@@ -34,4 +35,5 @@ const ProjectSchema = new Schema(
   }
 )
 
-export default models.Project || model('Project', ProjectSchema)
+export default models.Project<IProject> ||
+  model<IProject>('Project', ProjectSchema)
