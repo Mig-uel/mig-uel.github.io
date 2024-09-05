@@ -1,5 +1,4 @@
 import SocialButtons from '@/components/social-buttons.component'
-import { Menu, Mouse } from 'lucide-react'
 
 export default function HomePage() {
   return (
