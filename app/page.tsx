@@ -1,5 +1,5 @@
 import SocialButtons from '@/components/social-buttons.component'
-import { Mouse } from 'lucide-react'
+import { Menu, Mouse } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -14,14 +14,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div>
-          <SocialButtons />
-        </div>
-
-        <div className='flex gap-2 w-fit justify-center items-center absolute bottom-10 opacity-50 hover:opacity-100 transition-opacity duration-300'>
-          <Mouse size='1rem' />
-          <p className='uppercase font-light'>scroll down</p>
-        </div>
+        <SocialButtons />
       </section>
     </>
   )
