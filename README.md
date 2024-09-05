@@ -1,4 +1,4 @@
-# Personal Website
+# Portfolio
 
 A portfolio showcasing my about me, projects, social links and resume.
 
@@ -9,10 +9,7 @@ A portfolio showcasing my about me, projects, social links and resume.
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## Demo
+## Links
 
-https://miguelcastillo.net
-
-## Authors
-
-- [@migu-uel](https://www.github.com/mig-uel) (Developer)
+- [Live Site](https://miguelcastillo.net)
+- [LinkedIn](https://www.linkedin.com/in/miglcastillo/)
