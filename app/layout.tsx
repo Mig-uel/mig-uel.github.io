@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import MenuButton from '@/components/menu-button.component'
+import Menu from '@/components/menu.component'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -29,8 +30,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        <main className='container mx-auto h-screen w-full'>{children}</main>
         <MenuButton />
+
+        <main className='container mx-auto h-screen w-full relative'>
+          <Menu />
+
+          {children}
+        </main>
       </body>
     </html>
   )
