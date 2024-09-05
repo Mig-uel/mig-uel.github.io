@@ -10,17 +10,17 @@ type SocialLinks = {
 
 const socialLinks: SocialLinks[] = [
   {
-    icon: <Github />,
+    icon: <Github fill='black' />,
     label: 'Github',
     href: 'https://github.com/mig-uel',
   },
   {
-    icon: <Linkedin />,
+    icon: <Linkedin fill='black' />,
     label: 'LinkedIn',
     href: 'https://linkedin.com/in/miglcastillo',
   },
   {
-    icon: <Twitter />,
+    icon: <Twitter fill='black' />,
     label: 'Twitter',
     href: 'https://x.com/whitesauce',
   },
@@ -28,7 +28,7 @@ const socialLinks: SocialLinks[] = [
 
 const SocialButtons = () => {
   return (
-    <div className='flex gap-5'>
+    <div className='flex gap-4'>
       {socialLinks.map((link) => (
         <Button variant='ghost' size='icon' className='rounded-full'>
           <Link href={link.href}>{link.icon}</Link>
