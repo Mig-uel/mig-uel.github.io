@@ -9,7 +9,7 @@ export default function HomePage() {
             MIGUEL CASTILLO
           </h1>
           <p className='uppercase font-medium tracking-wide'>
-            Full Stack Engineer
+            Full Stack Developer
           </p>
         </div>
 
