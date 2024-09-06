@@ -29,8 +29,13 @@ const socialLinks: SocialLinks[] = [
 const SocialButtons = () => {
   return (
     <div className='flex gap-4'>
-      {socialLinks.map((link) => (
-        <Button variant='ghost' size='icon' className='rounded-full'>
+      {socialLinks.map((link, index) => (
+        <Button
+          key={index}
+          variant='ghost'
+          size='icon'
+          className='rounded-full'
+        >
           <Link href={link.href}>{link.icon}</Link>
         </Button>
       ))}
