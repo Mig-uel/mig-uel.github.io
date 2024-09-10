@@ -13,7 +13,7 @@ const MenuButton = () => {
       onClick={handleMenuButtonClick}
       type='button'
       size='icon'
-      className='rounded-full w-12 h-12 md:w-14 md:h-14 absolute bottom-5 left-5 shadow-lg'
+      className='rounded-full w-12 h-12 md:w-14 md:h-14 fixed z-30 bottom-5 left-5 shadow-lg opacity-50 hover:opacity-80'
     >
       <Menu className='w-5 h-5 md:w-12 md:h-6' />
     </Button>
