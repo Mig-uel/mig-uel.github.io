@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const AboutPage = () => {
   return (
-    <section className='flex flex-col justify-center items-center h-auto'>
-      <h1 className='uppercase text-3xl font-bold pt-10 pl-5 w-full self-start text-left'>
+    <section className='flex flex-col items-center py-10'>
+      <h1 className='uppercase text-3xl font-bold pl-5 w-full self-start text-left'>
         About
       </h1>
 
@@ -37,12 +37,56 @@ const AboutPage = () => {
         I've been specializing in full-stack development. I enjoy coding and
         creating websites.
       </p>
-      <p className='self-start uppercase mt-10 w-full px-5 md:px-20 text-center'>
-        Hello, world! I am Miguel, a full-stack developer. I graduated from
-        Brooklyn College with a Bachelors in Computer Science. Since graduating,
-        I've been specializing in full-stack development. I enjoy coding and
-        creating websites.
-      </p>
+
+      <div className='mt-12 w-full'>
+        <h1 className='text-left font-medium text-xl md:text-2xl pl-5 uppercase'>
+          EDUCATION
+        </h1>
+
+        <div className='flex flex-col mt-10 px-5 md:px-0 md:items-center'>
+          <div className='md:w-[350px] h-[150px] border-l-4 border-black flex flex-col relative'>
+            <div className='pl-4'>
+              <p className='font-medium uppercase text-lg'>Brooklyn College</p>
+              <p className='uppercase'>B.S. in Computer Science</p>
+            </div>
+            <div className='pl-4'>
+              <p className='text-md text-gray-400 uppercase'>
+                JUNE 2019 - AUGUST 2022
+              </p>
+            </div>
+            <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-1'></div>
+          </div>
+          <div className='md:w-[350px] h-[150px] border-l-4 border-black flex flex-col relative'>
+            <div className='pl-4'>
+              <p className='font-medium uppercase text-lg'>
+                Borough of Manhattan Community College
+              </p>
+              <p className='uppercase'>A.S. in Computer Science</p>
+            </div>
+            <div className='pl-4'>
+              <p className='text-md text-gray-400 uppercase'>
+                JUNE 2017 - JUNE 2022
+              </p>
+            </div>
+            <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-0'></div>
+          </div>
+          <div className='md:w-[350px] h-[150px] border-l-4 border-black flex flex-col relative'>
+            <div className='pl-4'>
+              <p className='font-medium uppercase text-lg'>
+                Franklin D. Roosevelt High School
+              </p>
+              <p className='uppercase'>High School Diploma</p>
+            </div>
+            <div className='pl-4'>
+              <p className='text-md text-gray-400 uppercase'>
+                SEPTEMBER 2013 - JUNE 2017
+              </p>
+            </div>
+            <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-0'></div>
+            <div className='h-5 w-5 bg-black -left-3 bottom-0 absolute z-0'></div>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
