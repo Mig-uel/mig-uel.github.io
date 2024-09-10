@@ -40,6 +40,58 @@ const AboutPage = () => {
 
       <div className='mt-12 w-full'>
         <h1 className='text-left font-medium text-xl md:text-2xl pl-5 uppercase'>
+          Experience
+        </h1>
+
+        <div className='flex flex-col mt-10 px-5 md:px-0 md:items-center'>
+          <div className='md:w-[350px] h-fit border-l-4 border-black flex flex-col relative'>
+            <div className='pl-4'>
+              <p className='font-medium uppercase text-lg'>
+                Whole Foods Market
+              </p>
+              <p className='uppercase'>Grocery Buyer</p>
+              <p className='uppercase py-5 text-sm'>
+                Orders, replenishes and merchandises grocery products and
+                participate in WFM program for purchasing and promotions.
+                Monitors inventory control and replenishes product based upon
+                WFM ordering standards. Assists in organizing and developing
+                promotional displays and maintaining OTS standards.
+              </p>
+            </div>
+            <div className='pl-4 pb-5'>
+              <p className='text-md text-gray-400 uppercase'>
+                SEPTEMBER 2019 - Present
+              </p>
+            </div>
+            <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-1'></div>
+          </div>
+
+          <div className='md:w-[350px] h-fit border-l-4 border-black flex flex-col relative'>
+            <div className='pl-4'>
+              <p className='font-medium uppercase text-lg'>Sector Software</p>
+              <p className='uppercase'>Backend Intern</p>
+              <p className='uppercase py-5 text-sm'>
+                Integrates with a useful technical jobs board or technical
+                resource site via an existing API OR ethically scrapes public
+                resources, stores data in a relational database, including a
+                data table model, allows for a POST or GET request to a RESTful
+                API, is deployed on a free instance via Heroku, EC2 or Digital
+                Ocean and has a home page view and Sector's basic UI branding.
+              </p>
+            </div>
+            <div className='pl-4'>
+              <p className='text-md text-gray-400 uppercase pb-5'>
+                SEPTEMBER 2013 - JUNE 2017
+              </p>
+            </div>
+            <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-0'></div>
+            <div className='h-5 w-5 bg-black -left-3 bottom-0 absolute z-0'></div>
+          </div>
+        </div>
+      </div>
+
+      <div className='mt-12 w-full'>
+        <h1 className='text-left font-medium text-xl md:text-2xl pl-5 uppercase'>
           EDUCATION
         </h1>
 
