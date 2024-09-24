@@ -1,6 +1,6 @@
 'use client'
 
-import Title from '@/components/title.component'
+import Title from '@/components/general/title.component'
 import { usePathname } from 'next/navigation'
 
 const RoutesLayout = ({ children }: { children: React.ReactNode }) => {
