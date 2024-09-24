@@ -60,7 +60,7 @@ const AboutPage = () => {
             </div>
             <div className='pl-4 pb-5'>
               <p className='text-md text-gray-400 uppercase'>
-                SEPTEMBER 2019 - Present
+                December 2019 - Present
               </p>
             </div>
             <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-1'></div>
