@@ -6,8 +6,6 @@ import { usePathname } from 'next/navigation'
 const RoutesLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname()
 
-  console.log(pathname)
-
   return (
     <section className='flex flex-col items-center py-10'>
       <Title text={pathname} />
