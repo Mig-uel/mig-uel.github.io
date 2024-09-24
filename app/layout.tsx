@@ -3,9 +3,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import MenuButton from '@/components/menu-button.component'
 import Menu from '@/components/menu.component'
-import Providers, { MenuContext } from './_providers/providers'
-import { useContext } from 'react'
-import Footer from '@/components/footer.component'
+import Providers from './_providers/providers'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -39,7 +37,7 @@ export default function RootLayout({
             <Menu />
 
             {children}
-            {/* <Footer /> */}
+            {/* TODO: <Footer /> */}
           </main>
         </Providers>
       </body>
