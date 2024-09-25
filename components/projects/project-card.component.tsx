@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Subtitle from '../general/subtitle.component'
+import Link from 'next/link'
 
 interface Project {
   id: string
@@ -18,11 +20,22 @@ const ProjectCard = ({
   title,
 }: Project) => {
   return (
-    <div className=' md:w-[350px] h-[200px] outline'>
-      {/* <div>
-        <Image src={imageUrl} alt={title} height={50} width={50} />
-      </div> */}
-    </div>
+    <>
+      <Link href={`/projects/${id}`}>
+        <div
+          className='flex flex-col items-center justify-center w-[450px] h-[250px] opacity-80 hover:opacity-100 group relative'
+          style={{
+            background: `url(${imageUrl})`,
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <div className='absolute hidden group-hover:block'>
+            <Subtitle text={title} className='text-white pt-0' />
+          </div>
+        </div>
+      </Link>
+    </>
   )
 }
 export default ProjectCard
