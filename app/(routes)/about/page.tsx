@@ -1,5 +1,7 @@
-import { GraduationCap, MapPin } from 'lucide-react'
+import Icon from '@/components/about/icon.component'
 import Image from 'next/image'
+import { GraduationCap, MapPin } from 'lucide-react'
+import Subtitle from '@/components/general/subtitle.component'
 
 const AboutPage = () => {
   return (
@@ -12,41 +14,34 @@ const AboutPage = () => {
         className='rounded-full shadow-lg mt-16 max-w-[150px] md:max-w-[180px]'
       />
 
-      <h1 className='text-xl md:text-2xl font-medium pt-10 uppercase tracking-wide md:tracking-wider'>
-        Miguel Castillo
-      </h1>
+      <Subtitle text='Miguel Castillo' />
 
-      <div className='flex flex-col md:flex-row gap-3 items-center justify-center uppercase font-normal mt-5 text-gray-500'>
-        <div className='flex gap-2 justify-center items-center'>
-          <GraduationCap fill='gray' size='1rem' />
-          <p>Brooklyn College</p>
-        </div>
-        <div className='flex gap-1 justify-center items-center'>
-          <MapPin fill='gray' size='1rem' />
-          <p>Brooklyn</p>
-        </div>
+      <div className='flex flex-col md:flex-row gap-3 items-center justify-center capitalize font-normal mt-5 text-gray-500'>
+        <Icon
+          icon={<GraduationCap fill='gray' size='1rem' />}
+          text='Brooklyn College'
+        />
+        <Icon icon={<MapPin fill='gray' size='1rem' />} text='Brooklyn' />
       </div>
 
-      <p className='self-start uppercase mt-10 w-full px-5 md:px-20 text-center'>
+      <p className='self-start mt-10 w-full px-5 md:px-20 text-center'>
         Hello, world! I am Miguel, a full-stack developer. I graduated from
         Brooklyn College with a Bachelors in Computer Science. Since graduating,
-        I've been specializing in full-stack development. I enjoy coding and
-        creating websites.
+        I've been specializing in full-stack development. I enjoy coding,
+        creating websites, and watching movies.
       </p>
 
       <div className='mt-12 w-full'>
-        <h1 className='text-left font-medium text-xl md:text-2xl pl-5 uppercase'>
-          Experience
-        </h1>
+        <Subtitle text='Experience' className='pl-5' />
 
         <div className='flex flex-col mt-10 px-5 md:px-0 md:items-center'>
           <div className='md:w-[350px] h-fit border-l-4 border-black flex flex-col relative'>
             <div className='pl-4'>
-              <p className='font-medium uppercase text-lg'>
+              <p className='font-medium capitalize text-lg'>
                 Whole Foods Market
               </p>
-              <p className='uppercase'>Grocery Buyer</p>
-              <p className='uppercase py-5 text-sm'>
+              <p className='capitalize'>Grocery Buyer</p>
+              <p className='py-5 text-sm'>
                 Orders, replenishes and merchandises grocery products and
                 participate in WFM program for purchasing and promotions.
                 Monitors inventory control and replenishes product based upon
@@ -55,7 +50,7 @@ const AboutPage = () => {
               </p>
             </div>
             <div className='pl-4 pb-5'>
-              <p className='text-md text-gray-400 uppercase'>
+              <p className='text-md text-gray-400 capitalize'>
                 December 2019 - Present
               </p>
             </div>
@@ -64,9 +59,9 @@ const AboutPage = () => {
 
           <div className='md:w-[350px] h-fit border-l-4 border-black flex flex-col relative'>
             <div className='pl-4'>
-              <p className='font-medium uppercase text-lg'>Sector Software</p>
-              <p className='uppercase'>Backend Intern</p>
-              <p className='uppercase py-5 text-sm'>
+              <p className='font-medium capitalize text-lg'>Sector Software</p>
+              <p className='capitalize'>Backend Intern</p>
+              <p className='py-5 text-sm'>
                 Integrates with a useful technical jobs board or technical
                 resource site via an existing API OR ethically scrapes public
                 resources, stores data in a relational database, including a
@@ -76,8 +71,8 @@ const AboutPage = () => {
               </p>
             </div>
             <div className='pl-4'>
-              <p className='text-md text-gray-400 uppercase pb-5'>
-                SEPTEMBER 2013 - JUNE 2017
+              <p className='text-md text-gray-400 capitalize pb-5'>
+                September 2013 - June 2017
               </p>
             </div>
             <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-0'></div>
@@ -87,47 +82,45 @@ const AboutPage = () => {
       </div>
 
       <div className='mt-12 w-full'>
-        <h1 className='text-left font-medium text-xl md:text-2xl pl-5 uppercase'>
-          EDUCATION
-        </h1>
+        <Subtitle text='Education' className='pl-5' />
 
         <div className='flex flex-col mt-10 px-5 md:px-0 md:items-center'>
           <div className='md:w-[350px] h-[150px] border-l-4 border-black flex flex-col relative'>
             <div className='pl-4'>
-              <p className='font-medium uppercase text-lg'>Brooklyn College</p>
-              <p className='uppercase'>B.S. in Computer Science</p>
+              <p className='font-medium capitalize text-lg'>Brooklyn College</p>
+              <p className='capitalize'>B.S. Computer Science</p>
             </div>
             <div className='pl-4'>
-              <p className='text-md text-gray-400 uppercase'>
-                JUNE 2019 - AUGUST 2022
+              <p className='text-md text-gray-400 capitalize'>
+                June 2019 - August 2022
               </p>
             </div>
             <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-1'></div>
           </div>
           <div className='md:w-[350px] h-[150px] border-l-4 border-black flex flex-col relative'>
             <div className='pl-4'>
-              <p className='font-medium uppercase text-lg'>
+              <p className='font-medium capitalize text-lg'>
                 Borough of Manhattan Community College
               </p>
-              <p className='uppercase'>A.S. in Computer Science</p>
+              <p className='capitalize'>A.S. Computer Science</p>
             </div>
             <div className='pl-4'>
-              <p className='text-md text-gray-400 uppercase'>
-                JUNE 2017 - JUNE 2022
+              <p className='text-md text-gray-400 capitalize'>
+                June 2017 - June 2022
               </p>
             </div>
             <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-0'></div>
           </div>
           <div className='md:w-[350px] h-[150px] border-l-4 border-black flex flex-col relative'>
             <div className='pl-4'>
-              <p className='font-medium uppercase text-lg'>
+              <p className='font-medium capitalize text-lg'>
                 Franklin D. Roosevelt High School
               </p>
-              <p className='uppercase'>High School Diploma</p>
+              <p className='capitalize'>High School Diploma</p>
             </div>
             <div className='pl-4'>
-              <p className='text-md text-gray-400 uppercase'>
-                SEPTEMBER 2013 - JUNE 2017
+              <p className='text-md text-gray-400 capitalize'>
+                September 2013 - June 2017
               </p>
             </div>
             <div className='rounded-full h-5 w-5 bg-black -left-3 absolute z-0'></div>
