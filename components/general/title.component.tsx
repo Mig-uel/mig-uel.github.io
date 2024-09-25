@@ -1,6 +1,10 @@
-const Title = ({ text }: { text: string }) => {
+const Title = ({ text, className }: { text: string; className?: string }) => {
   return (
-    <h1 className='uppercase text-3xl font-bold pl-5 w-full self-start text-left'>
+    <h1
+      className={` capitalize text-3xl font-bold pl-5 w-full self-start text-left ${
+        className && className
+      }`}
+    >
       {text}
     </h1>
   )
