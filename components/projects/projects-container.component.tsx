@@ -14,7 +14,7 @@ const ProjectsContainer = async () => {
   const projects = (await getProjects()) as Project[]
 
   return (
-    <div className='mt-10 grid  md:grid-cols-3 lg:grid-cols-4 gap-y-10 '>
+    <div className='mt-20 grid md:grid-cols-3 gap-y-10'>
       {projects.map((project, index) => (
         <ProjectCard key={index} {...project} />
       ))}
