@@ -10,7 +10,7 @@ const RoutesLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className='py-10'>
-      <div className='flex items-center justify-center gap-x-2'>
+      <div className='flex items-center justify-center gap-x-2 pl-2 md:pl-0'>
         <Link href='/'>
           <Home fill='' size='1.5rem' className='mt-1.5' />
         </Link>
