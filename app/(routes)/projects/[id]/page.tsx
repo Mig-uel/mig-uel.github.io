@@ -1,5 +1,6 @@
 import Subtitle from '@/components/general/subtitle.component'
 import Title from '@/components/general/title.component'
+import Nav from '@/components/nav/nav.component'
 import ProjectTechStack from '@/components/projects/project-tech-stack.component'
 import { getProjectById } from '@/firebase/db'
 
@@ -23,7 +24,7 @@ const ProjectPage = async ({ params: { id } }: Params) => {
 
   return (
     <div className='grid'>
-      <Title text={project.title} />
+      <Nav title={project.title} />
 
       <div
         className='h-[250px] mt-8'
@@ -35,14 +36,17 @@ const ProjectPage = async ({ params: { id } }: Params) => {
       ></div>
 
       <div>
-        <Subtitle text='Description:' />
-        <p className='mt-3'>{project.description}</p>
+        <p className='mt-3 text-muted-foreground'>{project.description}</p>
       </div>
 
       <div className='mt-3'>
-        <Subtitle text='Built With:' />
+        <Subtitle text='Technology' />
 
         <ProjectTechStack tags={project.tags} />
+      </div>
+
+      <div className='mt-3'>
+        <Subtitle text='Links' />
       </div>
     </div>
   )
