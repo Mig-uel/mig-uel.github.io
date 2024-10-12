@@ -65,14 +65,11 @@ const tagsWithIcons: TagWithIcon[] = [
 ]
 
 const ProjectTechIcon = ({ tag }: { tag: Tag }) => {
-  console.log(tag)
   const t: TagWithIcon[] = tagsWithIcons.reduce((acc, item) => {
     if (item.tag === tag) acc.push(item)
 
     return acc
   }, [] as TagWithIcon[])
-
-  console.log(t)
 
   return (
     <div className='text-center items-center grid text-xl justify-center'>
