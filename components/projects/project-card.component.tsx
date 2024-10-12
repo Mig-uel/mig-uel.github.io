@@ -11,14 +11,7 @@ interface Project {
   demoUrl: string
 }
 
-const ProjectCard = ({
-  id,
-  demoUrl,
-  description,
-  tags,
-  imageUrl,
-  title,
-}: Project) => {
+const ProjectCard = ({ id, imageUrl, title }: Project) => {
   return (
     <>
       <Link href={`/projects/${id}`}>
