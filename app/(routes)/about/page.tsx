@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { GraduationCap, MapPin } from 'lucide-react'
 import Subtitle from '@/components/general/subtitle.component'
 
+// TODO: fix formatting
+
 const AboutPage = () => {
   return (
     <>
