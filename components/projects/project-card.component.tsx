@@ -23,7 +23,7 @@ const ProjectCard = ({
     <>
       <Link href={`/projects/${id}`}>
         <div
-          className='flex flex-col items-center justify-center w-[450px] h-[250px] opacity-80 hover:opacity-100 group relative'
+          className='flex flex-col items-center justify-center h-[250px] opacity-80 hover:opacity-100 group relative'
           style={{
             background: `url(${imageUrl})`,
             backgroundPosition: 'center',
