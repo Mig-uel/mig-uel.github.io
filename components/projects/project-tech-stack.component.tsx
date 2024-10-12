@@ -1,11 +1,9 @@
 import ProjectTechIcon from './project-tech-icon.component'
 
 const ProjectTechStack = ({ tags }: { tags: Tag[] }) => {
-  console.log(tags.length > 2)
-
   return (
     <div
-      className={`grid  gap-10 mt-5 ${
+      className={`p-4 grid gap-y-10 mt-5 ${
         tags.length > 2 ? 'md:grid-cols-3' : 'md:grid-cols-2'
       }`}
     >
