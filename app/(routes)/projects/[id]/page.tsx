@@ -1,5 +1,7 @@
+import Subtitle from '@/components/general/subtitle.component'
+import Title from '@/components/general/title.component'
+import ProjectTechStack from '@/components/projects/project-tech-stack.component'
 import { getProjectById } from '@/firebase/db'
-import Image from 'next/image'
 
 type Params = {
   params: { id: string }
@@ -8,7 +10,7 @@ type Params = {
 interface Project {
   id: string
   description: string
-  tags: string[]
+  tags: Tag[]
   title: string
   imageUrl: string
   demoUrl: string
@@ -20,15 +22,28 @@ const ProjectPage = async ({ params: { id } }: Params) => {
   console.log(project)
 
   return (
-    <div className='pt-10 w-full'>
+    <div className='grid'>
+      <Title text={project.title} />
+
       <div
-        className='w-full h-[300px]'
+        className='h-[250px] mt-8'
         style={{
           background: `url(${project.imageUrl})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
       ></div>
+
+      <div>
+        <Subtitle text='Description:' />
+        <p className='mt-3'>{project.description}</p>
+      </div>
+
+      <div className='mt-3'>
+        <Subtitle text='Built With:' />
+
+        <ProjectTechStack tags={project.tags} />
+      </div>
     </div>
   )
 }
