@@ -3,7 +3,7 @@ import ProjectsContainer from '@/components/projects/projects-container.componen
 const ProjectsPage = () => {
   return (
     <>
-      <p className='mt-10 text-center text-muted-foreground'>
+      <p className='pt-10 text-center text-muted-foreground'>
         These are all of my projects that I've worked on throughout my learning
         experience.
       </p>
