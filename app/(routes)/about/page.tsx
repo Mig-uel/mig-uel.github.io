@@ -2,12 +2,15 @@ import Icon from '@/components/about/icon.component'
 import Image from 'next/image'
 import { GraduationCap, MapPin } from 'lucide-react'
 import Subtitle from '@/components/general/subtitle.component'
+import Nav from '@/components/nav/nav.component'
 
 // TODO: fix formatting
 
 const AboutPage = () => {
   return (
-    <>
+    <div className='container'>
+      <Nav title='About' />
+
       <Image
         src='https://raw.githubusercontent.com/Mig-uel/mig-uel.github.io/0a9fcf0bfdc3b3ab163d553c49e9f4f9d849e76e/assets/memoji.svg'
         alt='avatar'
@@ -130,7 +133,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 export default AboutPage
