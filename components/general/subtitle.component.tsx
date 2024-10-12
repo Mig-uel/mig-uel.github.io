@@ -7,7 +7,7 @@ const Subtitle = ({
 }) => {
   return (
     <h1
-      className={`text-xl md:text-2xl font-medium pt-10 capitalize tracking-wide ${
+      className={`text-xl md:text-2xl font-medium mt-5 capitalize tracking-wide ${
         className && className
       }`}
     >
