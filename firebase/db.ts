@@ -1,11 +1,12 @@
-import {
-  FirebaseServerAppSettings,
-  initializeApp,
-  initializeServerApp,
-  type FirebaseOptions,
-} from 'firebase/app'
+import { initializeApp, type FirebaseOptions } from 'firebase/app'
 
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  getDoc,
+  doc,
+} from 'firebase/firestore'
 
 const firebaseConfig: FirebaseOptions = {
   apiKey: process.env.API_KEY as string,
@@ -25,7 +26,21 @@ export const getProjects = async () => {
 
   const projectsSnapshot = await getDocs(projects)
 
-  const projectsList = projectsSnapshot.docs.map((doc) => doc.data())
+  const projectsList = projectsSnapshot.docs.map((doc) => {
+    return {
+      ...doc.data(),
+      id: doc.id,
+    }
+  })
 
   return projectsList
+}
+
+export const getProjectById = async (id: string) => {
+  const docRef = doc(db, 'projects', id)
+
+  const docSnap = await getDoc(docRef)
+
+  if (docSnap.exists()) return docSnap.data()
+  else return null
 }
