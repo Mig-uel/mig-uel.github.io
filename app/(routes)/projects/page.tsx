@@ -3,7 +3,7 @@ import ProjectsContainer from '@/components/projects/projects-container.componen
 
 const ProjectsPage = () => {
   return (
-    <div className='container'>
+    <div className='container p-3 sm:p-0'>
       <Nav title='Projects' />
 
       <p className='pt-10 text-center text-muted-foreground'>
