@@ -14,7 +14,6 @@ const menuLinks: MenuLinks[] = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact' },
 ]
 
 const Menu = () => {
@@ -23,7 +22,7 @@ const Menu = () => {
 
   return (
     <div
-      className={`text-lg md:text-xl w-full h-full flex flex-col justify-center items-center fixed z-20 gap-5 uppercase font-medium bg-white ${
+      className={`text-lg md:text-xl w-full h-full flex flex-col justify-center items-center fixed z-20 gap-5 capitalize font-medium bg-white ${
         !isMenuActive && 'hidden'
       }`}
       onClick={handleMenuButtonClick}
