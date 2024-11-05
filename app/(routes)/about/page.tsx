@@ -4,22 +4,22 @@ import { GraduationCap, MapPin } from 'lucide-react'
 import Subtitle from '@/components/general/subtitle.component'
 import Nav from '@/components/nav/nav.component'
 
-// TODO: fix formatting
-
 const AboutPage = () => {
   return (
     <div className='container'>
-      <Nav title='About' />
+      <Nav title='About' className='pl-2 md:pl-0' />
 
-      <Image
-        src='https://raw.githubusercontent.com/Mig-uel/mig-uel.github.io/0a9fcf0bfdc3b3ab163d553c49e9f4f9d849e76e/assets/memoji.svg'
-        alt='avatar'
-        width={200}
-        height={200}
-        className='rounded-full shadow-lg mt-16 max-w-[150px] md:max-w-[180px]'
-      />
+      <div className='text-center'>
+        <Image
+          src='https://raw.githubusercontent.com/Mig-uel/mig-uel.github.io/0a9fcf0bfdc3b3ab163d553c49e9f4f9d849e76e/assets/memoji.svg'
+          alt='avatar'
+          width={200}
+          height={200}
+          className='rounded-full shadow-lg mt-16 max-w-[150px] md:max-w-[180px] m-auto'
+        />
 
-      <Subtitle text='Miguel Castillo' />
+        <Subtitle text='Miguel Castillo' />
+      </div>
 
       <div className='flex flex-col md:flex-row gap-3 items-center justify-center capitalize font-normal mt-5 text-gray-500'>
         <Icon
