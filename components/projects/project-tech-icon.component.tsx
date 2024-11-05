@@ -72,15 +72,15 @@ const ProjectTechIcon = ({ tag }: { tag: Tag }) => {
   }, [] as TagWithIcon[])
 
   return (
-    <div className='text-center items-center grid text-xl justify-center'>
-      <div className='flex justify-center'>{t[0]?.icon}</div>
+    <div className='text-center items-center grid justify-center gap-y-2 '>
+      <div className='flex justify-center text-xl'>{t[0]?.icon}</div>
 
       <p
         className={`${
           tag !== 'css' && tag !== 'api' && tag !== 'html'
             ? 'capitalize'
             : 'uppercase'
-        }`}
+        } text-md`}
       >
         {t[0]?.tag}
       </p>
