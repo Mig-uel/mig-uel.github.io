@@ -24,7 +24,7 @@ const ProjectPage = async ({ params: { id } }: Params) => {
   const project = (await getProjectById(id)) as Project
 
   return (
-    <div className='grid bg-slate-50 py-2 md:px-3 rounded'>
+    <div className='grid py-2 md:px-3 rounded'>
       <Nav title={project.title} />
 
       <div
