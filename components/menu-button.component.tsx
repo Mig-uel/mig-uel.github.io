@@ -41,7 +41,7 @@ const MenuButton = () => {
             <Link
               href='/projects'
               className={`text-white ${
-                path === '/projects' ? 'opacity-100' : 'opacity-50'
+                path.includes('projects') ? 'opacity-100' : 'opacity-50'
               }`}
             >
               Projects
