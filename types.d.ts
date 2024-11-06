@@ -16,3 +16,12 @@ type TagWithIcon = {
   tag: Tag
   icon: React.ReactNode
 }
+
+type Project = {
+  title: string
+  description: string
+  imageUrl: string
+  githubUrl: string
+  demoUrl: string
+  tags: Tag[]
+}
