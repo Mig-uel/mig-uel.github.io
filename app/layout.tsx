@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import MenuButton from '@/components/menu-button.component'
-import Providers from './_providers/providers'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -30,13 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative m-0 p-0`}
       >
-        <Providers>
-          <MenuButton />
-          <main className='container mx-auto w-full relative'>
-            {children}
-            {/* TODO: <Footer /> */}
-          </main>
-        </Providers>
+        <MenuButton />
+        <main className='container mx-auto w-full relative'>
+          {children}
+          {/* TODO: <Footer /> */}
+        </main>
       </body>
     </html>
   )
