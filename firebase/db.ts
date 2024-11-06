@@ -1,4 +1,4 @@
-import { initializeApp, type FirebaseOptions } from 'firebase/app'
+import { app } from './config'
 
 import {
   getFirestore,
@@ -6,18 +6,8 @@ import {
   getDocs,
   getDoc,
   doc,
+  addDoc,
 } from 'firebase/firestore'
-
-const firebaseConfig: FirebaseOptions = {
-  apiKey: process.env.API_KEY as string,
-  authDomain: process.env.AUTH_DOMAIN as string,
-  projectId: process.env.PROJECT_ID as string,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  appId: process.env.APPID as string,
-}
-
-const app = initializeApp(firebaseConfig)
 
 export const db = getFirestore(app)
 
@@ -43,4 +33,10 @@ export const getProjectById = async (id: string) => {
 
   if (docSnap.exists()) return docSnap.data()
   else return null
+}
+
+export const addProject = async (project: Project) => {
+  const docRef = await addDoc(collection(db, 'projects'), project)
+
+  console.log(docRef.id)
 }
