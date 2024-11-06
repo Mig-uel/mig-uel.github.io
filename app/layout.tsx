@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import MenuButton from '@/components/menu-button.component'
-import Menu from '@/components/menu.component'
 import Providers from './_providers/providers'
 
 const geistSans = localFont({
@@ -34,8 +33,6 @@ export default function RootLayout({
         <Providers>
           <MenuButton />
           <main className='container mx-auto w-full relative'>
-            <Menu />
-
             {children}
             {/* TODO: <Footer /> */}
           </main>

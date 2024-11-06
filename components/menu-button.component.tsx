@@ -1,22 +1,55 @@
 'use client'
 
-import { Menu } from 'lucide-react'
 import { Button } from './ui/button'
-import { useContext } from 'react'
-import { MenuContext } from '@/app/_providers/providers'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const MenuButton = () => {
-  const { handleMenuButtonClick } = useContext(MenuContext)
+  const path = usePathname()
 
   return (
-    <Button
-      onClick={handleMenuButtonClick}
-      type='button'
-      size='icon'
-      className='rounded-full w-12 h-12 md:w-14 md:h-14 fixed z-30 bottom-5 left-5 shadow-lg opacity-50 hover:opacity-80'
-    >
-      <Menu className='w-5 h-5 md:w-12 md:h-6' />
-    </Button>
+    <div className='w-screen fixed bottom-5 flex justify-center z-30'>
+      <div className='w-fit h-12 rounded-full shadow-lg flex justify-center items-center bg-black'>
+        <div>
+          <Button asChild variant='link'>
+            <Link
+              href='/'
+              className={`text-white ${
+                path === '/' ? 'opacity-100' : 'opacity-50'
+              }`}
+            >
+              Home
+            </Link>
+          </Button>
+        </div>
+
+        <div>
+          <Button asChild variant='link'>
+            <Link
+              href='/about'
+              className={`text-white ${
+                path === '/about' ? 'opacity-100' : 'opacity-50'
+              }`}
+            >
+              About
+            </Link>
+          </Button>
+        </div>
+
+        <div>
+          <Button asChild variant='link'>
+            <Link
+              href='/projects'
+              className={`text-white ${
+                path === '/projects' ? 'opacity-100' : 'opacity-50'
+              }`}
+            >
+              Projects
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </div>
   )
 }
 export default MenuButton
