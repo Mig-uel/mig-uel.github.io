@@ -1,12 +1,16 @@
 'use client'
 
 import { auth } from '@/firebase/config'
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth'
+import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
+import { signOut } from 'firebase/auth'
 
 const AuthPage = () => {
   const router = useRouter()
+
+  const [user] = useAuthState(auth)
+
   const [signInWithGoogle] = useSignInWithGoogle(auth)
 
   const handleSignUp = async () => {
@@ -21,9 +25,15 @@ const AuthPage = () => {
 
   return (
     <div className='w-full h-screen flex flex-col justify-center items-center'>
-      <Button onClick={handleSignUp} variant='destructive'>
-        Login with Google
-      </Button>
+      {!user ? (
+        <Button type='button' onClick={handleSignUp}>
+          Login with Google
+        </Button>
+      ) : (
+        <Button type='button' onClick={() => signOut(auth)}>
+          Logout
+        </Button>
+      )}
     </div>
   )
 }
