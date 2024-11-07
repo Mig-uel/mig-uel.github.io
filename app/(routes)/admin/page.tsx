@@ -32,13 +32,13 @@ const AdminPage = () => {
   return (
     <div>
       <Title text='Admin Dashboard' />
-      <Button
-        variant='link'
-        className='p-0 text-md'
-        onClick={() => signOut(auth)}
-      >
-        Logout
-      </Button>
+
+      <div className='flex flex-col gap-2 items-start'>
+        <p className='text-lg'>{user.displayName}</p>
+        <Button variant='outline' size='sm' onClick={() => signOut(auth)}>
+          Logout
+        </Button>
+      </div>
 
       {/* ADD PROJECTS */}
       <div className='mt-8'>
