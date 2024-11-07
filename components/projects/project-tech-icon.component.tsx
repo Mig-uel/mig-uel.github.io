@@ -13,6 +13,9 @@ import {
 } from 'react-icons/si'
 import { TbApi } from 'react-icons/tb'
 
+// types
+import { Tag, TagWithIcon } from '@/types'
+
 const tagsWithIcons: TagWithIcon[] = [
   {
     tag: 'typescript',

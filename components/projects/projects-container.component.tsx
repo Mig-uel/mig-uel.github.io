@@ -1,14 +1,8 @@
 import { getProjects } from '@/firebase/db'
 import ProjectCard from './project-card.component'
 
-interface Project {
-  id: string
-  description: string
-  tags: string[]
-  title: string
-  imageUrl: string
-  demoUrl: string
-}
+// types
+import { Project } from '@/types'
 
 const ProjectsContainer = async () => {
   const projects = (await getProjects()) as Project[]

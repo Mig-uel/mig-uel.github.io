@@ -1,14 +1,8 @@
 import Subtitle from '../general/subtitle.component'
 import Link from 'next/link'
 
-interface Project {
-  id: string
-  description: string
-  tags: string[]
-  title: string
-  imageUrl: string
-  demoUrl: string
-}
+// types
+import { Project } from '@/types'
 
 const ProjectCard = ({ id, imageUrl, title }: Project) => {
   return (

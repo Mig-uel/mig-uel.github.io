@@ -1,6 +1,9 @@
 import { Button } from '../ui/button'
 import ProjectTechIcon from './project-tech-icon.component'
 
+// types
+import { Tag } from '@/types'
+
 const ProjectTechStack = ({ tags }: { tags: Tag[] }) => {
   return (
     <div
