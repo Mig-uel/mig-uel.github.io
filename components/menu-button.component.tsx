@@ -1,11 +1,14 @@
 'use client'
 
-import { Button } from './ui/button'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useUserWithToken } from '@/hooks/useUserWithToken'
+import { Button } from './ui/button'
 
 const MenuButton = () => {
   const path = usePathname()
+
+  const { user } = useUserWithToken()
 
   return (
     <div className='w-screen fixed bottom-5 flex justify-center z-30'>
@@ -48,6 +51,21 @@ const MenuButton = () => {
             </Link>
           </Button>
         </div>
+
+        {user && (
+          <div>
+            <Button asChild variant='link'>
+              <Link
+                href='/admin'
+                className={`text-white ${
+                  path === '/admin' ? 'opacity-100' : 'opacity-50'
+                }`}
+              >
+                Admin
+              </Link>
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   )
