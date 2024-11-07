@@ -2,9 +2,11 @@
 
 import { auth } from '@/firebase/config'
 import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth'
-import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 import { signOut } from 'firebase/auth'
+
+import { Button } from '@/components/ui/button'
+import { BarLoader } from 'react-spinners'
 
 const AuthPage = () => {
   const router = useRouter()
@@ -26,9 +28,7 @@ const AuthPage = () => {
   if (loading)
     return (
       <div className='w-full h-screen flex flex-col justify-center items-center'>
-        <Button type='button' variant='ghost'>
-          Loading...
-        </Button>
+        <BarLoader />
       </div>
     )
 
