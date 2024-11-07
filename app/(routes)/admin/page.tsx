@@ -1,17 +1,36 @@
 'use client'
 
+import { auth } from '@/firebase/config'
+import { useRouter } from 'next/navigation'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { action } from '@/actions/admin/action'
+
+import { tags } from '@/utils/tags'
+
 import Subtitle from '@/components/general/subtitle.component'
 import Title from '@/components/general/title.component'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Checkbox } from '@/components/ui/checkbox'
-import { tags } from '@/utils/tags'
 import { Button } from '@/components/ui/button'
-
-import { action } from '@/actions/admin/action'
+import { BarLoader } from 'react-spinners'
 
 const AdminPage = () => {
+  const [user, loading] = useAuthState(auth)
+  const router = useRouter()
+
+  if (loading)
+    return (
+      <div className='w-full h-screen flex flex-col justify-center items-center'>
+        <BarLoader />
+      </div>
+    )
+
+  if (!user) {
+    return router.push('/auth')
+  }
+
   return (
     <div>
       <Title text='Admin Dashboard' />
