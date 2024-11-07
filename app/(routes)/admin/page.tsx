@@ -1,6 +1,7 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
+import { auth } from '@/firebase/config'
+import { redirect } from 'next/navigation'
 import { action } from '@/actions/admin/action'
 
 import { tags } from '@/utils/tags'
@@ -14,10 +15,10 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
 import { BarLoader } from 'react-spinners'
 import { useUserWithToken } from '@/hooks/useUserWithToken'
+import { signOut } from 'firebase/auth'
 
 const AdminPage = () => {
-  const router = useRouter()
-  const { user, error, idToken, loading } = useUserWithToken()
+  const { user, idToken, loading } = useUserWithToken()
 
   if (loading)
     return (
@@ -26,11 +27,18 @@ const AdminPage = () => {
       </div>
     )
 
-  if (!user) return router.push('/auth')
+  if (!user) return redirect('/auth')
 
   return (
     <div>
       <Title text='Admin Dashboard' />
+      <Button
+        variant='link'
+        className='p-0 text-md'
+        onClick={() => signOut(auth)}
+      >
+        Logout
+      </Button>
 
       {/* ADD PROJECTS */}
       <div className='mt-8'>
