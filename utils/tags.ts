@@ -1,3 +1,5 @@
+import { Tag } from '@/types'
+
 export const tags: Tag[] = [
   'api',
   'css',
