@@ -3,21 +3,27 @@ import {
   type FirebaseOptions,
   getApps,
   FirebaseApp,
+  getApp,
 } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
 
-export let app: FirebaseApp
+let app: FirebaseApp
 
 if (!getApps().length) {
   const firebaseConfig: FirebaseOptions = {
-    apiKey: process.env.API_KEY as string,
-    authDomain: process.env.AUTH_DOMAIN as string,
-    projectId: process.env.PROJECT_ID as string,
-    storageBucket: process.env.STORAGE_BUCKET,
-    messagingSenderId: process.env.MESSAGING_SENDER_ID,
-    appId: process.env.APPID as string,
+    apiKey: process.env.NEXT_PUBLIC_API_KEY as string,
+    authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN as string,
+    projectId: process.env.NEXT_PUBLIC_PROJECT_ID as string,
+    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_APPID as string,
   }
 
   app = initializeApp(firebaseConfig)
 } else {
-  app = getApps()[0]
+  app = getApp()
 }
+
+const auth = getAuth(app)
+
+export { app, auth }
