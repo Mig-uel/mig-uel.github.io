@@ -9,6 +9,9 @@ import {
   addDoc,
 } from 'firebase/firestore'
 
+// types
+import { Project } from '@/types'
+
 export const db = getFirestore(app)
 
 export const getProjects = async () => {
