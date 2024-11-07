@@ -1,10 +1,13 @@
 'use server'
 
-import { adminDB, adminAuth } from '@/firebase/admin'
-import { db, addProject } from '@/firebase/db'
-import { getAuth } from 'firebase/auth'
-import { addDoc, collection } from 'firebase/firestore'
+// TODO: ADD ZOD
+
+import { adminDB, adminAuth, admin } from '@/firebase/admin'
+import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
+
+// types
+import { Project, Tag } from '@/types'
 
 export const action = async (formData: FormData) => {
   try {
@@ -13,17 +16,13 @@ export const action = async (formData: FormData) => {
 
     if (!idToken) throw new Error('ID token is missing')
 
-    // verify the id token
-    const auth = getAuth()
-    const decodedToken = await adminAuth.verifyIdToken(idToken)
-    const userId = decodedToken.uid
-
-    console.log(userId)
+    // verify ID token
+    const verifiedToken = await adminAuth.verifyIdToken(idToken)
+    const userId = verifiedToken.uid
 
     // Check if the UID matches the specific allowed UID
-    // if (userId !== 'ItuPaPE3swdWAjqciHN9PWSKpYZ2') {
-    //   throw new Error('You do not have permission to write this data')
-    // }
+    if (userId !== (process.env.ADMIN_UID as string))
+      throw new Error('You do not have permission to write this data')
 
     const project: Project = {
       demoUrl: formData.get('demoUrl') as string,
@@ -32,13 +31,16 @@ export const action = async (formData: FormData) => {
       imageUrl: formData.get('imageUrl') as string,
       tags: formData.getAll('tags') as Tag[],
       title: formData.get('title') as string,
-      userId,
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
     }
 
-    await addDoc(collection(db, 'projects'), project)
-
-    return redirect('/projects')
+    // add project to firebase
+    await adminDB.collection('projects').add(project)
   } catch (error) {
     console.log(error)
+    return
   }
+
+  revalidatePath('/projects')
+  return redirect('/projects')
 }
