@@ -9,7 +9,7 @@ import { signOut } from 'firebase/auth'
 const AuthPage = () => {
   const router = useRouter()
 
-  const [user] = useAuthState(auth)
+  const [user, loading] = useAuthState(auth)
 
   const [signInWithGoogle] = useSignInWithGoogle(auth)
 
@@ -22,6 +22,15 @@ const AuthPage = () => {
       console.log(error)
     }
   }
+
+  if (loading)
+    return (
+      <div className='w-full h-screen flex flex-col justify-center items-center'>
+        <Button type='button' variant='ghost'>
+          Loading...
+        </Button>
+      </div>
+    )
 
   return (
     <div className='w-full h-screen flex flex-col justify-center items-center'>
