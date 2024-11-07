@@ -6,18 +6,11 @@ import { getProjectById } from '@/firebase/db'
 import Link from 'next/link'
 import { FaGlobe, FaGithub } from 'react-icons/fa'
 
+// types
+import { Project, Tag } from '@/types'
+
 type Params = {
   params: { id: string }
-}
-
-interface Project {
-  id: string
-  description: string
-  tags: Tag[]
-  title: string
-  imageUrl: string
-  demoUrl: string
-  githubUrl: string
 }
 
 const ProjectPage = async ({ params: { id } }: Params) => {
