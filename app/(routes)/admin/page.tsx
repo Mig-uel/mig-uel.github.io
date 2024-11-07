@@ -1,8 +1,6 @@
 'use client'
 
-import { auth } from '@/firebase/config'
 import { useRouter } from 'next/navigation'
-import { useAuthState } from 'react-firebase-hooks/auth'
 import { action } from '@/actions/admin/action'
 
 import { tags } from '@/utils/tags'
@@ -15,10 +13,11 @@ import { Textarea } from '@/components/ui/textarea'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
 import { BarLoader } from 'react-spinners'
+import { useUserWithToken } from '@/hooks/useUserWithToken'
 
 const AdminPage = () => {
-  const [user, loading] = useAuthState(auth)
   const router = useRouter()
+  const { user, error, idToken, loading } = useUserWithToken()
 
   if (loading)
     return (
@@ -27,9 +26,7 @@ const AdminPage = () => {
       </div>
     )
 
-  if (!user) {
-    return router.push('/auth')
-  }
+  if (!user) return router.push('/auth')
 
   return (
     <div>
@@ -110,7 +107,13 @@ const AdminPage = () => {
             </div>
           </div>
 
-          <Button className='w-32' type='submit'>
+          <input type='hidden' name='idToken' value={idToken || ''} />
+
+          <Button
+            className='w-32'
+            type='submit'
+            disabled={loading || !user || !idToken}
+          >
             Add Project
           </Button>
         </form>
