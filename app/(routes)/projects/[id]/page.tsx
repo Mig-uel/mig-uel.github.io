@@ -46,9 +46,9 @@ const ProjectPage = async ({ params: { id } }: Params) => {
       <div className='mt-3'>
         <Subtitle text='Links' />
 
-        <div className='grid md:grid-cols-2 text-center mt-8 gap-y-3'>
+        <div className='grid md:grid-cols-2 text-center mt-8 gap-y-3 '>
           <div>
-            <Button asChild variant='link'>
+            <Button asChild variant='link' className='bg-muted p-8'>
               <Link href={project?.githubUrl || ''}>
                 <div className='flex items-center gap-x-2 text-lg'>
                   <FaGithub />
@@ -59,7 +59,7 @@ const ProjectPage = async ({ params: { id } }: Params) => {
           </div>
 
           <div>
-            <Button asChild variant='link'>
+            <Button asChild variant='link' className='bg-muted p-8'>
               <Link href={project?.demoUrl || ''}>
                 <div className='flex items-center gap-x-2 text-lg'>
                   <FaGlobe />
