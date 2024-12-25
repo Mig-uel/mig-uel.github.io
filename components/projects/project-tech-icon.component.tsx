@@ -10,8 +10,14 @@ import {
   SiCss3,
   SiNextdotjs,
   SiJavascript,
+  SiLeaflet,
+  SiTailwindcss,
+  SiCloudinary,
+  SiExpress,
+  SiNodedotjs,
 } from 'react-icons/si'
 import { TbApi } from 'react-icons/tb'
+import { Fingerprint } from 'lucide-react'
 
 // types
 import { Tag, TagWithIcon } from '@/types'
@@ -64,6 +70,30 @@ const tagsWithIcons: TagWithIcon[] = [
   {
     tag: 'api',
     icon: <TbApi />,
+  },
+  {
+    tag: 'tailwindcss',
+    icon: <SiTailwindcss />,
+  },
+  {
+    tag: 'auth',
+    icon: <Fingerprint />,
+  },
+  {
+    tag: 'cloudinary',
+    icon: <SiCloudinary />,
+  },
+  {
+    tag: 'node',
+    icon: <SiNodedotjs />,
+  },
+  {
+    tag: 'express',
+    icon: <SiExpress />,
+  },
+  {
+    tag: 'leaflet',
+    icon: <SiLeaflet />,
   },
 ]
 
