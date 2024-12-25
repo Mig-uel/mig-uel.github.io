@@ -1,3 +1,5 @@
+'use client'
+
 import Icon from '@/components/about/icon.component'
 import Image from 'next/image'
 import { GraduationCap, MapPin } from 'lucide-react'
@@ -6,6 +8,7 @@ import Nav from '@/components/nav/nav.component'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { FaRegFilePdf } from 'react-icons/fa6'
+import Skills from '@/components/about/skills.component'
 
 const AboutPage = () => {
   return (
@@ -53,6 +56,10 @@ const AboutPage = () => {
           specializing in full-stack development. I enjoy coding, creating
           websites, and watching movies.
         </p>
+      </div>
+
+      <div className='mt-10 w-full p-2 md:p-0'>
+        <Skills />
       </div>
 
       <div className='mt-10 w-full p-2 md:p-0'>
