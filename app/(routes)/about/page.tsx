@@ -1,5 +1,3 @@
-'use client'
-
 import Icon from '@/components/about/icon.component'
 import Image from 'next/image'
 import { GraduationCap, MapPin } from 'lucide-react'
