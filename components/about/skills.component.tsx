@@ -45,7 +45,7 @@ const Skills = () => {
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {technicalSkills.map((skill) => (
-            <Skill skill={skill} />
+            <Skill skill={skill} key={skill} />
           ))}
         </div>
       </div>
@@ -55,7 +55,7 @@ const Skills = () => {
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {softSkills.map((skill) => (
-            <Skill skill={skill} />
+            <Skill skill={skill} key={skill} />
           ))}
         </div>
       </div>
