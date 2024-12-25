@@ -13,6 +13,12 @@ export type Tag =
   | 'javascript'
   | 'nextjs'
   | 'api'
+  | 'tailwindcss'
+  | 'express'
+  | 'node'
+  | 'auth'
+  | 'leaflet'
+  | 'cloudinary'
 
 export type TagWithIcon = {
   tag: Tag
