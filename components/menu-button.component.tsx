@@ -1,10 +1,10 @@
 'use client'
 
+import { useUserWithToken } from '@/hooks/useUserWithToken'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useUserWithToken } from '@/hooks/useUserWithToken'
-import { Button } from './ui/button'
 import { ThemeToggle } from './theme-toggle'
+import { Button } from './ui/button'
 
 const MenuButton = () => {
   const path = usePathname()
