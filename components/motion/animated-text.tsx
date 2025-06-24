@@ -18,7 +18,7 @@ export default function AnimatedText({
       className={className}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
-      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      transition={{ duration: 0.8, ease: 'easeInOut' }}
     >
       {children}
     </MotionTag>
