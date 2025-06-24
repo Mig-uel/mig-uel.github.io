@@ -1,6 +1,7 @@
-import { Linkedin, Github, Twitter } from 'lucide-react'
-import { Button } from './ui/button'
+import { Github, Linkedin, Twitter } from 'lucide-react'
 import Link from 'next/link'
+import AnimatedDiv from './motion/animated-div'
+import { Button } from './ui/button'
 
 type SocialLinks = {
   icon: React.ReactNode
@@ -28,7 +29,7 @@ const socialLinks: SocialLinks[] = [
 
 const SocialButtons = () => {
   return (
-    <div className='flex gap-4'>
+    <AnimatedDiv className='flex gap-4'>
       {socialLinks.map((link, index) => (
         <Button
           key={index}
@@ -39,7 +40,7 @@ const SocialButtons = () => {
           <Link href={link.href}>{link.icon}</Link>
         </Button>
       ))}
-    </div>
+    </AnimatedDiv>
   )
 }
 export default SocialButtons
