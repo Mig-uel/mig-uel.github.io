@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useUserWithToken } from '@/hooks/useUserWithToken'
 import { Button } from './ui/button'
+import { ThemeToggle } from './theme-toggle'
 
 const MenuButton = () => {
   const path = usePathname()
@@ -12,9 +13,12 @@ const MenuButton = () => {
 
   return (
     <div className='w-screen fixed bottom-5 flex justify-center z-30'>
-      <div className='w-fit h-12 rounded-full shadow-lg flex justify-center items-center bg-black'>
+      <div className='w-fit h-12 rounded-full shadow-lg flex justify-center items-center  bg-black'>
         <div>
-          <Button asChild variant='link'>
+          <Button
+            asChild
+            variant='link'
+          >
             <Link
               href='/'
               className={`text-white ${
@@ -27,7 +31,10 @@ const MenuButton = () => {
         </div>
 
         <div>
-          <Button asChild variant='link'>
+          <Button
+            asChild
+            variant='link'
+          >
             <Link
               href='/about'
               className={`text-white ${
@@ -40,7 +47,10 @@ const MenuButton = () => {
         </div>
 
         <div>
-          <Button asChild variant='link'>
+          <Button
+            asChild
+            variant='link'
+          >
             <Link
               href='/projects'
               className={`text-white ${
@@ -54,7 +64,10 @@ const MenuButton = () => {
 
         {user && (
           <div>
-            <Button asChild variant='link'>
+            <Button
+              asChild
+              variant='link'
+            >
               <Link
                 href='/admin'
                 className={`text-white ${
@@ -66,6 +79,10 @@ const MenuButton = () => {
             </Button>
           </div>
         )}
+
+        <div className='pr-2'>
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   )

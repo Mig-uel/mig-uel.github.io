@@ -1,7 +1,8 @@
+import MenuButton from '@/components/menu-button.component'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import MenuButton from '@/components/menu-button.component'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -16,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: 'Miguel Castillo | Home',
-  description: 'A personal portfolio showcasing about me.',
+  description: 'A personal portfolio showcasing myself.',
 }
 
 export default function RootLayout({
@@ -29,11 +30,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative m-0 p-0`}
       >
-        <MenuButton />
-        <main className='container mx-auto w-full relative'>
-          {children}
-          {/* TODO: <Footer /> */}
-        </main>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <MenuButton />
+          <main className='container mx-auto w-full relative'>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   )
