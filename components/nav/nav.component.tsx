@@ -1,9 +1,9 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
-import Title from '../general/title.component'
-import { BiSolidLeftArrow } from 'react-icons/bi'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { BiSolidLeftArrow } from 'react-icons/bi'
+import Title from '../general/title.component'
 
 const Nav = ({ title, className }: { title: string; className?: string }) => {
   const pathname = usePathname()
@@ -21,7 +21,10 @@ const Nav = ({ title, className }: { title: string; className?: string }) => {
           <BiSolidLeftArrow className='inline' />
         </Link>
       )}
-      <Title text={title} className='inline' />
+      <Title
+        text={title}
+        className='inline'
+      />
     </div>
   )
 }
