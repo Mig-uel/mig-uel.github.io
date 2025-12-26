@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from 'lucide-react'
+import { Github, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import AnimatedDiv from './motion/animated-div'
 import { Button } from './ui/button'
@@ -19,11 +19,6 @@ const socialLinks: SocialLinks[] = [
     icon: <Linkedin fill='black' />,
     label: 'LinkedIn',
     href: 'https://linkedin.com/in/miglcastillo',
-  },
-  {
-    icon: <Twitter fill='black' />,
-    label: 'Twitter',
-    href: 'https://x.com/whitesauce',
   },
 ]
 

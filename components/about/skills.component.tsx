@@ -8,21 +8,10 @@ const Skill = ({ skill }: { skill: string }) => {
 
 const Skills = () => {
   const technicalSkills: SkillsType = [
-    'HTML/CSS',
-    'JavaScript',
-    'React',
-    'Node.js',
-    'Express',
-    'SQL',
-    'NoSQL',
-    'ORM/ODM',
+    'Agile Methodologies',
     'RESTful API Development',
-    'GraphQL',
+    'ORM/ODM',
     'JSON Web Token (JWT)',
-    'Docker',
-    'Tailwind CSS',
-    'Jest',
-    'Git/GitHub',
     'Responsive Design',
     'Mobile-First Development',
   ]
@@ -45,7 +34,10 @@ const Skills = () => {
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {technicalSkills.map((skill) => (
-            <Skill skill={skill} key={skill} />
+            <Skill
+              skill={skill}
+              key={skill}
+            />
           ))}
         </div>
       </div>
@@ -55,7 +47,10 @@ const Skills = () => {
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {softSkills.map((skill) => (
-            <Skill skill={skill} key={skill} />
+            <Skill
+              skill={skill}
+              key={skill}
+            />
           ))}
         </div>
       </div>

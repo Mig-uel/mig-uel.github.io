@@ -26,7 +26,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      suppressHydrationWarning
+    >
+      <head>
+        <link
+          rel='stylesheet'
+          type='text/css'
+          href='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative m-0 p-0`}
       >
