@@ -13,7 +13,6 @@ import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
-import { BarLoader } from 'react-spinners'
 import { useUserWithToken } from '@/hooks/useUserWithToken'
 import { signOut } from 'firebase/auth'
 
@@ -23,7 +22,7 @@ const AdminPage = () => {
   if (loading)
     return (
       <div className='w-full h-screen flex flex-col justify-center items-center'>
-        <BarLoader />
+        <p>Loading...</p>
       </div>
     )
 
@@ -35,7 +34,11 @@ const AdminPage = () => {
 
       <div className='flex flex-col gap-2 items-start'>
         <p className='text-lg'>{user.displayName}</p>
-        <Button variant='outline' size='sm' onClick={() => signOut(auth)}>
+        <Button
+          variant='outline'
+          size='sm'
+          onClick={() => signOut(auth)}
+        >
           Logout
         </Button>
       </div>
@@ -107,15 +110,25 @@ const AdminPage = () => {
 
             <div className='flex flex-col gap-3 mt-4'>
               {tags.map((tag) => (
-                <div className='capitalize flex gap-1' key={tag}>
-                  <Checkbox name='tags' value={tag} />
+                <div
+                  className='capitalize flex gap-1'
+                  key={tag}
+                >
+                  <Checkbox
+                    name='tags'
+                    value={tag}
+                  />
                   <Label>{tag}</Label>
                 </div>
               ))}
             </div>
           </div>
 
-          <input type='hidden' name='idToken' value={idToken || ''} />
+          <input
+            type='hidden'
+            name='idToken'
+            value={idToken || ''}
+          />
 
           <Button
             className='w-32'

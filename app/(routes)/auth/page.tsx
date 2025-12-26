@@ -5,7 +5,6 @@ import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import { useRouter } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
-import { BarLoader } from 'react-spinners'
 import { useEffect } from 'react'
 
 const AuthPage = () => {
@@ -30,13 +29,16 @@ const AuthPage = () => {
   if (loading || user)
     return (
       <div className='w-full h-screen flex flex-col justify-center items-center'>
-        <BarLoader />
+        <p>Loading...</p>
       </div>
     )
 
   return (
     <div className='w-full h-screen flex flex-col justify-center items-center'>
-      <Button type='button' onClick={handleSignUp}>
+      <Button
+        type='button'
+        onClick={handleSignUp}
+      >
         Login with Google
       </Button>
     </div>
