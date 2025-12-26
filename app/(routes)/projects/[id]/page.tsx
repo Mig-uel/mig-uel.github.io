@@ -4,16 +4,20 @@ import ProjectTechStack from '@/components/projects/project-tech-stack.component
 import { Button } from '@/components/ui/button'
 import { getProjectById } from '@/firebase/db'
 import Link from 'next/link'
-import { FaGlobe, FaGithub } from 'react-icons/fa'
+import { FaGithub, FaGlobe } from 'react-icons/fa'
 
 // types
-import { Project, Tag } from '@/types'
+import { Project } from '@/types'
 
 type Params = {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }
 
-const ProjectPage = async ({ params: { id } }: Params) => {
+const ProjectPage = async (props: Params) => {
+  const params = await props.params
+
+  const { id } = params
+
   const project = (await getProjectById(id)) as Project
 
   return (
@@ -48,7 +52,11 @@ const ProjectPage = async ({ params: { id } }: Params) => {
 
         <div className='grid md:grid-cols-2 text-center mt-8 gap-y-3 '>
           <div>
-            <Button asChild variant='link' className='bg-muted p-8'>
+            <Button
+              asChild
+              variant='link'
+              className='bg-muted p-8'
+            >
               <Link href={project?.githubUrl || ''}>
                 <div className='flex items-center gap-x-2 text-lg'>
                   <FaGithub />
@@ -59,7 +67,11 @@ const ProjectPage = async ({ params: { id } }: Params) => {
           </div>
 
           <div>
-            <Button asChild variant='link' className='bg-muted p-8'>
+            <Button
+              asChild
+              variant='link'
+              className='bg-muted p-8'
+            >
               <Link href={project?.demoUrl || ''}>
                 <div className='flex items-center gap-x-2 text-lg'>
                   <FaGlobe />
