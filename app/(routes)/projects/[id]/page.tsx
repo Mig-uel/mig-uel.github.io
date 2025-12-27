@@ -6,8 +6,7 @@ import { getProjectById } from '@/firebase/db'
 import Link from 'next/link'
 import { FaGithub, FaGlobe } from 'react-icons/fa'
 
-// types
-import { Project } from '@/types'
+import type { Project } from '@/types'
 
 type Params = {
   params: Promise<{ id: string }>
@@ -21,7 +20,7 @@ const ProjectPage = async (props: Params) => {
   const project = (await getProjectById(id)) as Project
 
   return (
-    <div className='grid py-2 md:px-3 rounded'>
+    <div className='grid  py-2 md:px-3 rounded'>
       <Nav title={project.title} />
 
       <div
@@ -41,16 +40,17 @@ const ProjectPage = async (props: Params) => {
       </div>
 
       <div className='mt-3'>
-        <Subtitle text='Technology Stack' />
+        <Subtitle text='Built With' />
 
         <ProjectTechStack tags={project.tags} />
       </div>
 
       {/* LINKS */}
-      <div className='mt-3'>
+      <div className='mt-3 pb-10'>
         <Subtitle text='Links' />
 
-        <div className='grid md:grid-cols-2 text-center mt-8 gap-y-3 '>
+        <div className='grid grid-cols-2 md:grid-cols-6 mt-8 place-items-center md:place-items-start'>
+          {/* GitHub Link */}
           <div>
             <Button
               asChild
@@ -58,7 +58,7 @@ const ProjectPage = async (props: Params) => {
               className='bg-muted p-8'
             >
               <Link href={project?.githubUrl || ''}>
-                <div className='flex items-center gap-x-2 text-lg'>
+                <div className='flex items-center gap-x-2'>
                   <FaGithub />
                   <p>Repo</p>
                 </div>
@@ -66,6 +66,7 @@ const ProjectPage = async (props: Params) => {
             </Button>
           </div>
 
+          {/* Demo Link */}
           <div>
             <Button
               asChild
@@ -73,9 +74,9 @@ const ProjectPage = async (props: Params) => {
               className='bg-muted p-8'
             >
               <Link href={project?.demoUrl || ''}>
-                <div className='flex items-center gap-x-2 text-lg'>
+                <div className='flex items-center gap-x-2'>
                   <FaGlobe />
-                  <p>Website</p>
+                  <p>Live Demo</p>
                 </div>
               </Link>
             </Button>

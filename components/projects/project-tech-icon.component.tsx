@@ -1,26 +1,29 @@
+import { Fingerprint } from 'lucide-react'
 import {
-  SiTypescript,
-  SiReact,
-  SiRedux,
-  SiStyledcomponents,
-  SiFirebase,
-  SiMongodb,
-  SiMongoose,
-  SiHtml5,
+  SiCloudinary,
   SiCss3,
-  SiNextdotjs,
+  SiExpress,
+  SiFirebase,
+  SiHtml5,
   SiJavascript,
   SiLeaflet,
-  SiTailwindcss,
-  SiCloudinary,
-  SiExpress,
+  SiMongodb,
+  SiMongoose,
+  SiNextdotjs,
   SiNodedotjs,
+  SiPrisma,
+  SiReact,
+  SiRedux,
+  SiShadcnui,
+  SiStyledcomponents,
+  SiTailwindcss,
+  SiTypescript,
 } from 'react-icons/si'
 import { TbApi } from 'react-icons/tb'
-import { Fingerprint } from 'lucide-react'
 
 // types
 import { Tag, TagWithIcon } from '@/types'
+import { BiLogoPostgresql } from 'react-icons/bi'
 
 const tagsWithIcons: TagWithIcon[] = [
   {
@@ -95,6 +98,18 @@ const tagsWithIcons: TagWithIcon[] = [
     tag: 'leaflet',
     icon: <SiLeaflet />,
   },
+  {
+    tag: 'prisma',
+    icon: <SiPrisma />,
+  },
+  {
+    tag: 'shadcn',
+    icon: <SiShadcnui />,
+  },
+  {
+    tag: 'postgres',
+    icon: <BiLogoPostgresql />,
+  },
 ]
 
 const ProjectTechIcon = ({ tag }: { tag: Tag }) => {
@@ -105,10 +120,12 @@ const ProjectTechIcon = ({ tag }: { tag: Tag }) => {
   }, [] as TagWithIcon[])
 
   return (
-    <div className='text-center items-center grid justify-center gap-y-2 '>
-      <div className='flex justify-center text-xl'>{t[0]?.icon}</div>
+    <div className='flex flex-col items-center gap-2 text-center'>
+      {/* Icon */}
+      <div>{t[0]?.icon}</div>
 
-      <p
+      {/* Icon Label */}
+      <label
         className={`${
           tag !== 'css' && tag !== 'api' && tag !== 'html'
             ? 'capitalize'
@@ -116,7 +133,7 @@ const ProjectTechIcon = ({ tag }: { tag: Tag }) => {
         } text-md`}
       >
         {t[0]?.tag}
-      </p>
+      </label>
     </div>
   )
 }
