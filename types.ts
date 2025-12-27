@@ -19,6 +19,9 @@ export type Tag =
   | 'auth'
   | 'leaflet'
   | 'cloudinary'
+  | 'prisma'
+  | 'shadcn'
+  | 'postgres'
 
 export type TagWithIcon = {
   tag: Tag
