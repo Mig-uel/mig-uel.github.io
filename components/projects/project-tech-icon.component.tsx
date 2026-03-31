@@ -1,7 +1,7 @@
 import { Fingerprint } from 'lucide-react'
 import {
   SiCloudinary,
-  SiCss3,
+  SiCss,
   SiExpress,
   SiFirebase,
   SiHtml5,
@@ -68,7 +68,7 @@ const tagsWithIcons: TagWithIcon[] = [
   },
   {
     tag: 'css',
-    icon: <SiCss3 />,
+    icon: <SiCss />,
   },
   {
     tag: 'api',
